@@ -1,0 +1,808 @@
+Question #101Topic 1
+A user is planning to setup notifications on the RDS DB for a snapshot. Which of the below mentioned event categories is not supported by RDS for this snapshot source type?
+A. Backup
+B. Creation
+C. Deletion
+D. Restoration
+ 
+Question #102Topic 1
+A customer is using AWS for Dev and Test. The customer wants to setup the Dev environment with
+Cloudformation. Which of the below mentioned steps are not required while using Cloudformation?
+A. Create a stack
+B. Configure a service
+C. Create and upload the template
+D. Provide the parameters configured as part of the template
+ 
+Question #103Topic 1
+A user has configured the AWS CloudWatch alarm for estimated usage charges in the US East region. Which of the below mentioned statements is not true with respect to the estimated charges?
+A. It will store the estimated charges data of the last 14 days
+B. It will include the estimated charges of every AWS service
+C. The metric data will represent the data of all the regions
+D. The metric data will show data specific to that region
+ 
+Question #104Topic 1
+A user is accessing RDS from an application. The user has enabled the Multi AZ feature with the MS SQL
+RDS DB. During a planned outage how will AWS ensure that a switch from DB to a standby replica will not affect access to the application?
+A. RDS will have an internal IP which will redirect all requests to the new DB
+B. RDS uses DNS to switch over to stand by replica for seamless transition
+C. The switch over changes Hardware so RDS does not need to worry about access
+D. RDS will have both the DBs running independently and the user has to manually switch over
+ 
+Question #105Topic 1
+An organization is generating digital policy files which are required by the admins for verification. Once the files are verified they may not be required in the future unless there is some compliance issue. If the organization wants to save them in a cost effective way, which is the best possible solution?
+A. AWS RRS
+B. AWS S3
+C. AWS RDS
+D. AWS Glacier
+ 
+Question #106Topic 1
+A user has launched an EBS backed instance. The user started the instance at 9 AM in the morning. Between
+9 AM to 10 AM, the user is testing some script. Thus, he stopped the instance twice and restarted it. In the same hour the user rebooted the instance once. For how many instance hours will AWS charge the user?
+A. 3 hours
+B. 4 hours
+C. 2 hours
+D. 1 hour
+ 
+Question #107Topic 1
+An organization has configured the custom metric upload with CloudWatch. The organization has given permission to its employees to upload data using CLI as well SDK. How can the user track the calls made to
+CloudWatch?
+A. The user can enable logging with CloudWatch which logs all the activities
+B. Use CloudTrail to monitor the API calls
+C. Create an IAM user and allow each user to log the data using the S3 bucket
+D. Enable detailed monitoring with CloudWatch
+ 
+Question #108Topic 1
+A user has created a queue named "myqueue" with SQS. There are four messages published to queue which are not received by the consumer yet. If the user tries to delete the queue, what will happen?
+A. A user can never delete a queue manually. AWS deletes it after 30 days of inactivity on queue
+B. It will delete the queue
+C. It will initiate the delete but wait for four days before deleting until all messages are deleted automatically.
+D. It will ask user to delete the messages first
+ 
+Question #109Topic 1
+A user has launched a large EBS backed EC2 instance in the US-East-1a region. The user wants to achieve
+Disaster Recovery (DR. for that instance by creating another small instance in Europe. How can the user achieve DR?
+A. Copy the running instance using the "Instance Copy" command to the EU region
+B. Create an AMI of the instance and copy the AMI to the EU region. Then launch the instance from the EU AMI
+C. Copy the instance from the US East region to the EU region
+D. Use the "Launch more like this" option to copy the instance from one region to another
+ 
+Question #110Topic 1
+A user has created numerous EBS volumes. What is the general limit for each AWS account for the maximum number of EBS volumes that can be created?
+A. 10000
+B. 5000
+C. 100
+D. 1000
+
+
+Question #111Topic 1
+A user has created a VPC with CIDR 20.0.0.0/16 using the wizard. The user has created a public subnet CIDR
+(20.0.0.0/24. and VPN only subnets CIDR (20.0.1.0/24. along with the VPN gateway (vgw-12345. to connect to the users data center. Which of the below mentioned options is a valid entry for the main route table in this scenario?
+A. Destination: 20.0.0.0/24 and Target: vgw-12345
+B. Destination: 20.0.0.0/16 and Target: ALL
+C. Destination: 20.0.1.0/16 and Target: vgw-12345
+D. Destination: 0.0.0.0/0 and Target: vgw-12345
+ 
+Question #112Topic 1
+A user has stored data on an encrypted EBS volume. The user wants to share the data with his friends AWS account. How can user achieve this?
+A. Create an AMI from the volume and share the AMI
+B. Copy the data to an unencrypted volume and then share
+C. Take a snapshot and share the snapshot with a friend
+D. If both the accounts are using the same encryption key then the user can share the volume directly
+ 
+Question #113Topic 1
+A user has enabled the Multi AZ feature with the MS SQL RDS database server. Which of the below mentioned statements will help the user understand the Multi AZ feature better?
+A. In a Multi AZ, AWS runs two DBs in parallel and copies the data asynchronously to the replica copy
+B. In a Multi AZ, AWS runs two DBs in parallel and copies the data synchronously to the replica copy
+C. In a Multi AZ, AWS runs just one DB but copies the data synchronously to the standby replica
+D. AWS MS SQL does not support the Multi AZ feature
+ 
+Question #114Topic 1
+An organization is using cost allocation tags to find the cost distribution of different departments and projects.
+One of the instances has two separate tags with the key/ value as "InstanceName/HR", "CostCenter/HR".
+What will AWS do in this case?
+A. InstanceName is a reserved tag for AWS. Thus, AWS will not allow this tag
+B. AWS will not allow the tags as the value is the same for different keys
+C. AWS will allow tags but will not show correctly in the cost allocation report due to the same value of the two separate keys
+D. AWS will allow both the tags and show properly in the cost distribution report
+ 
+Question #115Topic 1
+A user is publishing custom metrics to CloudWatch. Which of the below mentioned statements will help the user understand the functionality better?
+A. The user can use the CloudWatch Import tool
+B. The user should be able to see the data in the console after around 15 minutes
+C. If the user is uploading the custom data, the user must supply the namespace, timezone, and metric name as part of the command
+D. The user can view as well as upload data using the console, CLI and APIs
+ 
+Question #116Topic 1
+A user is launching an EC2 instance in the US East region. Which of the below mentioned options is recommended by AWS with respect to the selection of the availability zone?
+A. Always select the US-East-1-a zone for HA
+B. Do not select the AZ; instead let AWS select the AZ
+C. The user can never select the availability zone while launching an instance
+D. Always select the AZ while launching an instance
+ 
+Question #117Topic 1
+A user has created a VPC with CIDR 20.0.0.0/16 with only a private subnet and VPN connection using the
+VPC wizard. The user wants to connect to the instance in a private subnet over SSH. How should the user define the security rule for SSH?
+A. Allow Inbound traffic on port 22 from the user’s network
+B. The user has to create an instance in EC2 Classic with an elastic IP and configure the security group of a private subnet to allow SSH from that elastic IP
+C. The user can connect to a instance in a private subnet using the NAT instance
+D. Allow Inbound traffic on port 80 and 22 to allow the user to connect to a private subnet over the Internet
+ 
+Question #118Topic 1
+A user has created an ELB with the availability zone US-East-1.
+The user wants to add more zones to ELB to achieve High Availability. How can the user add more zones to the existing ELB?
+A. It is not possible to add more zones to the existing ELB
+B. The only option is to launch instances in different zones and add to ELB
+C. The user should stop the ELB and add zones and instances as required
+D. The user can add zones on the fly from the AWS console
+ 
+Question #119Topic 1
+A user has configured an Auto Scaling group with ELB. The user has enabled detailed CloudWatch monitoring on Elastic Load balancing. Which of the below mentioned statements will help the user understand this functionality better?
+A. ELB sends data to CloudWatch every minute only and does not charge the user
+B. ELB will send data every minute and will charge the user extra
+C. ELB is not supported by CloudWatch
+D. It is not possible to setup detailed monitoring for ELB
+ 
+Question #120Topic 1
+A user has configured ELB with two EBS backed EC2 instances. The user is trying to understand the DNS access and IP support for ELB. Which of the below mentioned statements may not help the user understand the IP mechanism supported by ELB?
+A. The client can connect over IPV4 or IPV6 using Dualstack
+B. ELB DNS supports both IPV4 and IPV6
+C. Communication between the load balancer and back-end instances is always through IPV4
+D. The ELB supports either IPV4 or IPV6 but not both
+
+Question #121Topic 1
+A user has received a message from the support team that an issue occurred 1 week back between 3 AM to 4
+AM and the EC2 server was not reachable. The user is checking the CloudWatch metrics of that instance.
+How can the user find the data easily using the CloudWatch console?
+A. The user can find the data by giving the exact values in the time Tab under CloudWatch metrics
+B. The user can find the data by filtering values of the last 1 week for a 1 hour period in the Relative tab under CloudWatch metrics
+C. It is not possible to find the exact time from the console. The user has to use CLI to provide the specific time
+D. The user can find the data by giving the exact values in the Absolute tab under CloudWatch metrics
+ 
+Question #122Topic 1
+A user has setup Auto Scaling with ELB on the EC2 instances. The user wants to configure that whenever the
+CPU utilization is below 10%, Auto Scaling should remove one instance. How can the user configure this?
+A. The user can get an email using SNS when the CPU utilization is less than 10%. The user can use the desired capacity of Auto Scaling to remove the instance
+B. Use CloudWatch to monitor the data and Auto Scaling to remove the instances using scheduled actions
+C. Configure CloudWatch to send a notification to Auto Scaling Launch configuration when the CPU utilization is less than 10% and configure the Auto Scaling policy to remove the instance
+D. Configure CloudWatch to send a notification to the Auto Scaling group when the CPU Utilization is less
+ 
+Question #123Topic 1
+A user has enabled detailed CloudWatch metric monitoring on an Auto Scaling group. Which of the below mentioned metrics will help the user identify the total number of instances in an Auto Scaling group including pending, terminating and running instances?
+A. GroupTotalInstances
+B. GroupSumInstances
+C. It is not possible to get a count of all the three metrics together. The user has to find the individual number of running, terminating and pending instances and sum it
+D. GroupInstancesCount
+ 
+Question #124Topic 1
+A user is trying to configure the CloudWatch billing alarm. Which of the below mentioned steps should be performed by the user for the first time alarm creation in the AWS Account Management section?
+A. Enable Receiving Billing Reports
+B. Enable Receiving Billing Alerts
+C. Enable AWS billing utility
+D. Enable CloudWatch Billing Threshold
+ 
+Question #125Topic 1
+A user is checking the CloudWatch metrics from the AWS console. The user notices that the CloudWatch data is coming in UTC. The user wants to convert the data to a local time zone. How can the user perform this?
+A. In the CloudWatch dashboard the user should set the local time zone so that CloudWatch shows the data only in the local time zone
+B. In the CloudWatch console select the local time zone under the Time Range tab to view the data as per the local timezone
+C. The CloudWatch data is always in UTC; the user has to manually convert the data
+D. The user should have send the local time zone while uploading the data so that CloudWatch will show the
+ 
+Question #126Topic 1
+An organization (Account ID 123412341234. has attached the below mentioned IAM policy to a user. What does this policy statement entitle the user to perform?
+
+"Statement":[
+"Sid" : "AllowUsersAllActionsForCredentials", "Effect": "Allow", "Action": [ "iam:*Accesskeyt",
+"Resource": ["arn:aws:iam: : 123412341234:user/${aws:username}"]
+}]
+
+A. The policy allows the IAM user to modify all IAM users’ access keys using the console, SDK, CLI or APIs
+B. The policy allows the IAM user to modify all IAM users’ credentials using the console, SDK, CLI or APIs
+C. The policy allows the IAM user to modify all credentials using only the console
+D. The policy allows the IAM user to modify the IAM user’s own credentials using the console, SDK, CLI or
+ 
+Question #127Topic 1
+A user is trying to connect to a running EC2 instance using SSH. However, the user gets a connection time out error. Which of the below mentioned options is not a possible reason for rejection?
+A. The access key to connect to the instance is wrong
+B. The security group is not configured properly
+C. The private key used to launch the instance is not correct
+D. The instance CPU is heavily loaded
+ 
+Question #128Topic 1
+A user has configured Elastic Load Balancing by enabling a Secure Socket Layer (SSL) negotiation configuration known as a Security Policy. Which of the below mentioned options is not part of this secure policy while negotiating the SSL connection between the user and the client?
+A. SSL Protocols
+B. Client Order Preference
+C. SSL Ciphers
+D. Server Order Preference
+ 
+Question #129Topic 1
+A user has configured CloudWatch monitoring on an EBS backed EC2 instance. If the user has not attached any additional device, which of the below mentioned metrics will always show a 0 value?
+A. DiskReadBytes
+B. NetworkIn
+C. NetworkOut
+D. CPUUtilization
+ 
+Question #130Topic 1
+A user has launched an EBS backed EC2 instance. What will be the difference while performing the restart or stop/start options on that instance?
+A. For restart it does not charge for an extra hour, while every stop/start it will be charged as a separate hour
+B. Every restart is charged by AWS as a separate hour, while multiple start/stop actions during a single hour will be counted as a single hour
+C. For every restart or start/stop it will be charged as a separate hour
+D. For restart it charges extra only once, while for every stop/start it will be charged as a separate hour
+
+
+Question #131Topic 1
+A user has created a queue named "myqueue" in US-East region with AWS SQS. The user’s AWS account ID is 123456789012. If the user wants to perform some action on this queue, which of the below Queue URL should he use?
+A. http://sqs.us-east-1.amazonaws.com/123456789012/myqueue
+B. http://sqs.amazonaws.com/123456789012/myqueue
+C. http://sqs. 123456789012.us-east-1.amazonaws.com/myqueue
+D. http:// 123456789012.sqs. us-east-1.amazonaws.com/myqueue
+ 
+Question #132Topic 1
+A sys admin is trying to understand the Auto Scaling activities. Which of the below mentioned processes is not performed by Auto Scaling?
+A. Reboot Instance
+B. Schedule Actions
+C. Replace Unhealthy
+D. Availability Zone Balancing
+ 
+Question #133Topic 1
+A sys admin is trying to understand EBS snapshots. Which of the below mentioned statements will not be useful to the admin to understand the concepts about a snapshot?
+A. The snapshot is synchronous
+B. It is recommended to stop the instance before taking a snapshot for consistent data
+C. The snapshot is incremental
+D. The snapshot captures the data that has been written to the hard disk when the snapshot command was
+ 
+Question #134Topic 1
+A root account owner has created an S3 bucket testmycloud. The account owner wants to allow everyone to upload the objects as well as enforce that the person who uploaded the object should manage the permission of those objects. Which is the easiest way to achieve this?
+A. The root account owner should create a bucket policy which allows the IAM users to upload the object
+B. The root account owner should create the bucket policy which allows the other account owners to set the object policy of that bucket
+C. The root account should use ACL with the bucket to allow everyone to upload the object
+D. The root account should create the IAM users and provide them the permission to upload content to the
+ 
+Question #135Topic 1
+An organization has setup consolidated billing with 3 different AWS accounts. Which of the below mentioned advantages will organization receive in terms of the AWS pricing?
+A. The consolidated billing does not bring any cost advantage for the organization
+B. All AWS accounts will be charged for S3 storage by combining the total storage of each account
+C. The EC2 instances of each account will receive a total of 750*3 micro instance hours free
+D. The free usage tier for all the 3 accounts will be 3 years and not a single year
+ 
+Question #136Topic 1
+A user has launched two EBS backed EC2 instances in the US-East-1a region. The user wants to change the zone of one of the instances. How can the user change it?
+A. Stop one of the instances and change the availability zone
+B. The zone can only be modified using the AWS CLI
+C. From the AWS EC2 console, select the Actions - > Change zones and specify new zone
+D. Create an AMI of the running instance and launch the instance in a separate AZ
+ 
+Question #137Topic 1
+A user wants to make so that whenever the CPU utilization of the AWS EC2 instance is above 90%, the redlight of his bedroom turns on. Which of the below mentioned AWS services is helpful for this purpose?
+A. AWS CloudWatch + AWS SES
+B. AWS CloudWatch + AWS SNS
+C. None. It is not possible to configure the light with the AWS infrastructure services
+D. AWS CloudWatch and a dedicated software turning on the light
+ 
+Question #138Topic 1
+An organization has added 3 of his AWS accounts to consolidated billing. One of the AWS accounts has purchased a Reserved Instance (RI. of a small instance size in the US-East-1a zone. All other AWS accounts are running instances of a small size in the same zone. What will happen in this case for the RI pricing?
+A. Only the account that has purchased the RI will get the advantage of RI pricing
+B. One instance of a small size and running in the US-East-1a zone of each AWS account will get the benefit of RI pricing
+C. Any single instance from all the three accounts can get the benefit of AWS RI pricing if they are running in the same zone and are of the same size
+D. If there are more than one instances of a small size running across multiple accounts in the same zone no
+ 
+Question #139Topic 1
+An organization is planning to use AWS for 5 different departments. The finance department is responsible to pay for all the accounts. However, they want the cost separation for each account to map with the right cost center. How can the finance department achieve this?
+A. Create 5 separate accounts and make them a part of one consolidate billing
+B. Create 5 separate accounts and use the IAM cross account access with the roles for better management
+C. Create 5 separate IAM users and set a different policy for their access
+D. Create 5 separate IAM groups and add users as per the department’s employees
+ 
+Question #140Topic 1
+A user has setup an EBS backed instance and a CloudWatch alarm when the CPU utilization is more than
+65%. The user has setup the alarm to watch it for 5 periods of 5 minutes each. The CPU utilization is 60% between 9 AM to 6 PM. The user has stopped the EC2 instance for 15 minutes between 11 AM to 11:15 AM.
+What will be the status of the alarm at 11:30 AM?
+A. Alarm
+B. OK
+C. Insufficient Data
+D. Error
+
+
+Question #141Topic 1
+A user is running one instance for only 3 hours every day. The user wants to save some cost with the instance. Which of the below mentioned Reserved Instance categories is advised in this case?
+A. The user should not use RI; instead only go with the on-demand pricing
+B. The user should use the AWS high utilized RI
+C. The user should use the AWS medium utilized RI
+D. The user should use the AWS low utilized RI
+ 
+Question #142Topic 1
+A user has setup an RDS DB with Oracle. The user wants to get notifications when someone modifies the security group of that DB. How can the user configure that?
+A. It is not possible to get the notifications on a change in the security group
+B. Configure SNS to monitor security group changes
+C. Configure event notification on the DB security group
+D. Configure the CloudWatch alarm on the DB for a change in the security group
+ 
+Question #143Topic 1
+A user is trying to setup a recurring Auto Scaling process. The user has setup one process to scale up every day at 8 am and scale down at 7 PM. The user is trying to setup another recurring process which scales up on the 1st of every month at 8 AM and scales down the same day at 7 PM. What will Auto Scaling do in this scenario?
+A. Auto Scaling will execute both processes but will add just one instance on the 1st
+B. Auto Scaling will add two instances on the 1st of the month
+C. Auto Scaling will schedule both the processes but execute only one process randomly
+D. Auto Scaling will throw an error since there is a conflict in the schedule of two separate Auto Scaling
+ 
+Question #144Topic 1
+A user is planning to setup infrastructure on AWS for the Christmas sales. The user is planning to use Auto
+Scaling based on the schedule for proactive scaling. What advice would you give to the user?
+A. It is good to schedule now because if the user forgets later on it will not scale up
+B. The scaling should be setup only one week before Christmas
+C. Wait till end of November before scheduling the activity
+D. It is not advisable to use scheduled based scaling
+ 
+Question #145Topic 1
+A user is trying to understand the ACL and policy for an S3 bucket. Which of the below mentioned policy permissions is equivalent to the WRITE ACL on a bucket?
+A. s3:GetObjectAcl
+B. s3:GetObjectVersion
+C. s3:ListBucketVersions
+D. s3:DeleteObject
+ 
+Question #146Topic 1
+A user has created an ELB with Auto Scaling. Which of the below mentioned offerings from ELB helps the user to stop sending new requests traffic from the load balancer to the EC2 instance when the instance is being deregistered while continuing in-flight requests?
+A. ELB sticky session
+B. ELB deregistration check
+C. ELB connection draining
+D. ELB auto registration Off
+ 
+Question #147Topic 1
+A user has launched an EC2 instance from an instance store backed AMI. The infrastructure team wants to create an AMI from the running instance. Which of the below mentioned steps will not be performed while creating the AMI?
+A. Define the AMI launch permissions
+B. Upload the bundled volume
+C. Register the AMI
+D. Bundle the volume
+ 
+Question #148Topic 1
+You are managing the AWS account of a big organization. The organization has more than 1000+ employees and they want to provide access to the various services to most of the employees. Which of the below mentioned options is the best possible solution in this case?
+A. The user should create a separate IAM user for each employee and provide access to them as per the policy
+B. The user should create an IAM role and attach STS with the role. The user should attach that role to the EC2 instance and setup AWS authentication on that server
+C. The user should create IAM groups as per the organizations departments and add each user to the group for better access control
+D. Attach an IAM role with the organization’s authentication service to authorize each user for various AWS
+ 
+Question #149Topic 1
+A user has configured a VPC with a new subnet. The user has created a security group. The user wants to configure that instances of the same subnet communicate with each other. How can the user configure this with the security group?
+A. There is no need for a security group modification as all the instances can communicate with each other inside the same subnet
+B. Configure the subnet as the source in the security group and allow traffic on all the protocols and ports
+C. Configure the security group itself as the source and allow traffic on all the protocols and ports
+D. The user has to use VPC peering to configure this
+ 
+Question #150Topic 1
+A user is launching an instance. He is on the "Tag the instance" screen. Which of the below mentioned information will not help the user understand the functionality of an AWS tag?
+A. Each tag will have a key and value
+B. The user can apply tags to the S3 bucket
+C. The maximum value of the tag key length is 64 unicode characters
+D. AWS tags are used to find the cost distribution of various resources
+ 
+Question #151Topic 1
+A user has created a VPC with CIDR 20.0.0.0/16. The user has created public and VPN only subnets along with hardware VPN access to connect to the users datacenter. The user wants to make so that all traffic coming to the public subnet follows the organizations proxy policy. How can the user make this happen?
+A. Setting up a NAT with the proxy protocol and configure that the public subnet receives traffic from NAT
+B. Setting up a proxy policy in the internet gateway connected with the public subnet
+C. It is not possible to setup the proxy policy for a public subnet
+D. Setting the route table and security group of the public subnet which receives traffic from a virtual private
+ 
+Question #152Topic 1
+A user has created a VPC with CIDR 20.0.0.0/24. The user has created a public subnet with CIDR 20.0.0.0/25 and a private subnet with CIDR 20.0.0.128/25. The user has launched one instance each in the private and public subnets. Which of the below mentioned options cannot be the correct IP address (private IP. assigned to an instance in the public or private subnet?
+A. 20.0.0.255
+B. 20.0.0.132
+C. 20.0.0.122
+D. 20.0.0.55
+ 
+Question #153Topic 1
+A user has launched an EBS backed EC2 instance. The user has rebooted the instance. Which of the below mentioned statements is not true with respect to the reboot action?
+A. The private and public address remains the same
+B. The Elastic IP remains associated with the instance
+C. The volume is preserved
+D. The instance runs on a new host computer
+ 
+Question #154Topic 1
+A user has setup a web application on EC2. The user is generating a log of the application performance at every second. There are multiple entries for each second. If the user wants to send that data to CloudWatch every minute, what should he do?
+A. The user should send only the data of the 60th second as CloudWatch will map the receive data timezone with the sent data timezone
+B. It is not possible to send the custom metric to CloudWatch every minute
+C. Give CloudWatch the Min, Max, Sum, and SampleCount of a number of every minute
+D. Calculate the average of one minute and send the data to CloudWatch
+ 
+Question #155Topic 1
+An AWS root account owner is trying to create a policy to access RDS. Which of the below mentioned statements is true with respect to the above information?
+A. Create a policy which allows the users to access RDS and apply it to the RDS instances
+B. The user cannot access the RDS database if he is not assigned the correct IAM policy
+C. The root account owner should create a policy for the IAM user and give him access to the RDS services
+D. The policy should be created for the user and provide access for RDS
+ 
+Question #156Topic 1
+A user is using a small MySQL RDS DB. The user is experiencing high latency due to the Multi AZ feature.
+Which of the below mentioned options may not help the user in this situation?
+A. Schedule the automated back up in non-working hours
+B. Use a large or higher size instance
+C. Use PIOPS
+D. Take a snapshot from standby Replica
+ 
+Question #157Topic 1
+A user is displaying the CPU utilization, and Network in and Network out CloudWatch metrics data of a single instance on the same graph. The graph uses one Y-axis for CPU utilization and Network in and another Y-axis for Network out. Since Network in is too high, the CPU utilization data is not visible clearly on graph to the user. How can the data be viewed better on the same graph?
+A. It is not possible to show multiple metrics with the different units on the same graph
+B. Add a third Y-axis with the console to show all the data in proportion
+C. Change the axis of Network by using the Switch command from the graph
+D. Change the units of CPU utilization so it can be shown in proportion with Network
+ 
+Question #158Topic 1
+A user is planning to use AWS services for his web application. If the user is trying to set up his own billing management system for AWS, how can he configure it?
+A. Set up programmatic billing access. Download and parse the bill as per the requirement
+B. It is not possible for the user to create his own billing management service with AWS
+C. Enable the AWS CloudWatch alarm which will provide APIs to download the alarm data
+D. Use AWS billing APIs to download the usage report of each service from the AWS billing console
+ 
+Question #159Topic 1
+A user is planning to schedule a backup for an EBS volume. The user wants security of the snapshot data.
+How can the user achieve data encryption with a snapshot?
+A. Use encrypted EBS volumes so that the snapshot will be encrypted by AWS
+B. While creating a snapshot select the snapshot with encryption
+C. By default, the snapshot is encrypted by AWS
+D. Enable server side encryption for the snapshot using S3
+ 
+Question #160Topic 1
+A user has created a public subnet with VPC and launched an EC2 instance within it. The user is trying to delete the subnet. What will happen in this scenario?
+A. It will delete the subnet and make the EC2 instance as a part of the default subnet
+B. It will not allow the user to delete the subnet until the instances are terminated
+C. It will delete the subnet as well as terminate the instances
+D. The subnet can never be deleted independently, but the user has to delete the VPC first
+ 
+Question #161Topic 1
+A user has setup an EBS backed instance and attached 2 EBS volumes to it. The user has setup a
+CloudWatch alarm on each volume for the disk data. The user has stopped the EC2 instance and detached the EBS volumes. What will be the status of the alarms on the EBS volume?
+A. OK
+B. Insufficient Data
+C. Alarm
+D. The EBS cannot be detached until all the alarms are removed
+ 
+Question #162Topic 1
+A user has launched an EC2 instance from an instance store backed AMI. The infrastructure team wants to create an AMI from the running instance. Which of the below mentioned credentials is not required while creating the AMI?
+A. AWS account ID
+B. X.509 certificate and private key
+C. AWS login ID to login to the console
+D. Access key and secret access key
+ 
+Question #163Topic 1
+A user has configured an SSL listener at ELB as well as on the back-end instances. Which of the below mentioned statements helps the user understand ELB traffic handling with respect to the SSL listener?
+A. It is not possible to have the SSL listener both at ELB and back-end instances
+B. ELB will modify headers to add requestor details
+C. ELB will intercept the request to add the cookie details if sticky session is enabled
+D. ELB will not modify the headers
+ 
+Question #164Topic 1
+A user has created a Cloudformation stack. The stack creates AWS services, such as EC2 instances, ELB,
+AutoScaling, and RDS. While creating the stack it created EC2, ELB and AutoScaling but failed to create RDS.
+What will Cloudformation do in this scenario?
+A. Cloudformation can never throw an error after launching a few services since it verifies all the steps before launching
+B. It will warn the user about the error and ask the user to manually create RDS
+C. Rollback all the changes and terminate all the created services
+D. It will wait for the user’s input about the error and correct the mistake after the input
+ 
+Question #165Topic 1
+A user is trying to launch an EBS backed EC2 instance under free usage. The user wants to achieve encryption of the EBS volume. How can the user encrypt the data at rest?
+A. Use AWS EBS encryption to encrypt the data at rest
+B. The user cannot use EBS encryption and has to encrypt the data manually or using a third party tool
+C. The user has to select the encryption enabled flag while launching the EC2 instance
+D. Encryption of volume is not available as a part of the free usage tier
+ 
+Question #166Topic 1
+A user has created a VPC with public and private subnets using the VPC wizard. The user has not launched any instance manually and is trying to delete the VPC. What will happen in this scenario?
+A. It will not allow to delete the VPC as it has subnets with route tables
+B. It will not allow to delete the VPC since it has a running route instance
+C. It will terminate the VPC along with all the instances launched by the wizard
+D. It will not allow to delete the VPC since it has a running NAT instance
+ 
+Question #167Topic 1
+An organization is measuring the latency of an application every minute and storing data inside a file in the
+JSON format. The organization wants to send all latency data to AWS CloudWatch. How can the organization achieve this?
+A. The user has to parse the file before uploading data to CloudWatch
+B. It is not possible to upload the custom data to CloudWatch
+C. The user can supply the file as an input to the CloudWatch command
+D. The user can use the CloudWatch Import command to import data from the file to CloudWatch
+ 
+Question #168Topic 1
+A user has launched an EBS backed instance with EC2-Classic. The user stops and starts the instance.
+Which of the below mentioned statements is not true with respect to the stop/start action?
+A. The instance gets new private and public IP addresses
+B. The volume is preserved
+C. The Elastic IP remains associated with the instance
+D. The instance may run on a new host computer
+ 
+Question #169Topic 1
+A user has launched an RDS postgreSQL DB with AWS. The user did not specify the maintenance window during creation. The user has configured RDS to update the DB instance type from micro to large. If the user wants to have it during the maintenance window, what will AWS do?
+A. AWS will not allow to update the DB until the maintenance window is configured
+B. AWS will select the default maintenance window if the user has not provided it
+C. AWS will ask the user to specify the maintenance window during the update
+D. It is not possible to change the DB size from micro to large with RDS
+ 
+Question #170Topic 1
+A user has created a subnet in VPC and launched an EC2 instance within it. The user has not selected the option to assign the IP address while launching the instance. The user has 3 elastic IPs and is trying to assign one of the Elastic IPs to the VPC instance from the console. The console does not show any instance in the IP assignment screen. What is a possible reason that the instance is unavailable in the assigned IP console?
+A. The IP address may be attached to one of the instances
+B. The IP address belongs to a different zone than the subnet zone
+C. The user has not created an internet gateway
+D. The IP addresses belong to EC2 Classic; so they cannot be assigned to VPC
+ 
+Question #171Topic 1
+A user has launched multiple EC2 instances for the purpose of development and testing in the same region.
+The user wants to find the separate cost for the production and development instances. How can the user find the cost distribution?
+A. The user should download the activity report of the EC2 services as it has the instance ID wise data
+B. It is not possible to get the AWS cost usage data of single region instances separately
+C. The user should use Cost Distribution Metadata and AWS detailed billing
+D. The user should use Cost Allocation Tags and AWS billing reports
+ 
+Question #172Topic 1
+A user has created a VPC with CIDR 20.0.0.0/16 using VPC Wizard. The user has created a public CIDR
+(20.0.0.0/24) and a VPN only subnet CIDR (20.0.1.0/24) along with the hardware VPN access to connect to the users data center. Which of the below mentioned components is not present when the VPC is setup with the wizard?
+A. Main route table attached with a VPN only subnet
+B. A NAT instance configured to allow the VPN subnet instances to connect with the internet
+C. Custom route table attached with a public subnet
+D. An internet gateway for a public subnet
+ 
+Question #173Topic 1
+A user has created a VPC with the public subnet. The user has created a security group for that VPC. Which of the below mentioned statements is true when a security group is created?
+A. It can connect to the AWS services, such as S3 and RDS by default
+B. It will have all the inbound traffic by default
+C. It will have all the outbound traffic by default
+D. It will allow by default traffic to the internet gateway
+ 
+Question #174Topic 1
+A user has setup an Auto Scaling group. The group has failed to launch a single instance for more than 24 hours. What will happen to Auto Scaling in this condition?
+A. Auto Scaling will keep trying to launch the instance for 72 hours
+B. Auto Scaling will suspend the scaling process
+C. Auto Scaling will start an instance in a separate region
+D. The Auto Scaling group will be terminated automatically
+ 
+Question #175Topic 1
+A user is planning to set up the Multi AZ feature of RDS. Which of the below mentioned conditions won't take advantage of the Multi AZ feature?
+A. Availability zone outage
+B. A manual failover of the DB instance using Reboot with failover option
+C. Region outage
+D. When the user changes the DB instance’s server type
+ 
+Question #176Topic 1
+An organization has configured Auto Scaling with ELB. One of the instance health check returns the status as
+Impaired to Auto Scaling. What will Auto Scaling do in this scenario?
+A. Perform a health check until cool down before declaring that the instance has failed
+B. Terminate the instance and launch a new instance
+C. Notify the user using SNS for the failed state
+D. Notify ELB to stop sending traffic to the impaired instance
+ 
+Question #177Topic 1
+A user is using Cloudformation to launch an EC2 instance and then configure an application after the instance is launched. The user wants the stack creation of ELB and AutoScaling to wait until the EC2 instance is launched and configured properly. How can the user configure this?
+A. It is not possible that the stack creation will wait until one service is created and launched
+B. The user can use the HoldCondition resource to wait for the creation of the other dependent resources
+C. The user can use the DependentCondition resource to hold the creation of the other dependent resources
+D. The user can use the WaitCondition resource to hold the creation of the other dependent resources
+ 
+Question #178Topic 1
+An organization has configured two single availability zones. The Auto Scaling groups are configured in separate zones. The user wants to merge the groups such that one group spans across multiple zones. How can the user configure this?
+A. Run the command as-join-auto-scaling-group to join the two groups
+B. Run the command as-update-auto-scaling-group to configure one group to span across zones and delete the other group
+C. Run the command as-copy-auto-scaling-group to join the two groups
+D. Run the command as-merge-auto-scaling-group to merge the groups
+ 
+Question #179Topic 1
+An AWS account wants to be part of the consolidated billing of his organizations payee account. How can the owner of that account achieve this?
+A. The payee account has to request AWS support to link the other accounts with his account
+B. The owner of the linked account should add the payee account to his master account list from the billing console
+C. The payee account will send a request to the linked account to be a part of consolidated billing
+D. The owner of the linked account requests the payee account to add his account to consolidated billing
+ 
+Question #180Topic 1
+A sysadmin has created the below mentioned policy on an S3 bucket named cloudacademy. 
+
+{
+    "Statement": [{
+        "Sid": "Stmt1388811069831",
+        "Effect": "Allow",
+        "Principal": {"AWS": "*"}
+    },
+    "Action": [
+        "S3: GetObjectAcl",
+        "S3:ListBucket"
+    ],
+    "Resource": [
+        "arn:aws:33:::cloudacademy"
+    ]}]
+}
+
+What does this policy define?
+
+A. It will make the cloudacademy bucket as well as all its objects as public
+B. It will allow everyone to view the ACL of the bucket
+C. It will give an error as no object is defined as part of the policy while the action defines the rule about the object
+D. It will make the cloudacademy bucket as public
+ 
+Question #181Topic 1
+A user has launched two EBS backed EC2 instances in the US-East-1a region. The user wants to change the zone of one of the instances. How can the user change it?
+A. The zone can only be modified using the AWS CLI
+B. Create an AMI of the running instance and launch the instance in a separate AZ
+C. Stop one of the instances and change the availability zone
+D. From the AWS EC2 console, select the Actions - > Change zones and specify the new zone
+ 
+Question #182Topic 1
+An organization (account ID 123412341234) has configured the IAM policy to allow the user to modify his credentials. What will the below mentioned statement allow the user to perform?
+
+{"Version": "2012-10-17", 
+"Statement" : [{ "Effect": "Allow", 
+				"Action":[
+					 "iam: AdduserToGroup", 
+					 "iam: RemoveUserFromGroup", 
+					 "iam: GetGroup"
+				],
+				"Resource": "arn:aws:iam: : 123412341234 :group/TestingGroup"
+				]
+}
+
+
+A. The IAM policy will throw an error due to an invalid resource name
+B. The IAM policy will allow the user to subscribe to any IAM group
+C. Allow the IAM user to update the membership of the group called TestingGroup
+D. Allow the IAM user to delete the TestingGroup
+ 
+Question #183Topic 1
+A user has configured ELB with two EBS backed instances. The user has stopped the instances for 1 week to save costs. The user restarts the instances after 1 week. Which of the below mentioned statements will help the user to understand the ELB and instance registration better?
+A. There is no way to register the stopped instances with ELB
+B. The user cannot stop the instances if they are registered with ELB
+C. If the instances have the same Elastic IP assigned after reboot they will be registered with ELB
+D. The instances will automatically get registered with ELB
+ 
+Question #184Topic 1
+A user is trying to connect to a running EC2 instance using SSH. However, the user gets a Host key not found error. Which of the below mentioned options is a possible reason for rejection?
+A. The user has provided the wrong user name for the OS login
+B. The instance CPU is heavily loaded
+C. The security group is not configured properly
+D. The access key to connect to the instance is wrong
+ 
+Question #185Topic 1
+A user has hosted an application on EC2 instances. The EC2 instances are configured with ELB and Auto
+Scaling. The application server session time out is 2 hours. The user wants to configure connection draining to ensure that all in-flight requests are supported by ELB even though the instance is being deregistered. What time out period should the user specify for connection draining?
+A. 5 minutes
+B. 1 hour
+C. 30 minutes
+D. 2 hours
+ 
+Question #186Topic 1
+A user is using the AWS EC2. The user wants to make so that when there is an issue in the EC2 server, such as instance status failed, it should start a new instance in the users private cloud. Which AWS service helps to achieve this automation?
+A. AWS CloudWatch + Cloudformation
+B. AWS CloudWatch + AWS AutoScaling + AWS ELB
+C. AWS CloudWatch + AWS VPC
+D. AWS CloudWatch + AWS SNS
+ 
+Question #187Topic 1
+A sys admin has enabled logging on ELB. Which of the below mentioned fields will not be a part of the log file name?
+A. Load Balancer IP
+B. EC2 instance IP
+C. S3 bucket name
+D. Random string
+ 
+Question #188Topic 1
+A user has created a queue named "awsmodule" with SQS. One of the consumers of queue is down for 3 days and then becomes available. Will that component receive message from queue?
+A. Yes, since SQS by default stores message for 4 days
+B. No, since SQS by default stores message for 1 day only
+C. No, since SQS sends message to consumers who are available that time
+D. Yes, since SQS will not delete message until it is delivered to all consumers
+ 
+Question #189Topic 1
+An organization has setup multiple IAM users. The organization wants that each IAM user accesses the IAM console only within the organization and not from outside. How can it achieve this?
+A. Create an IAM policy with the security group and use that security group for AWS console login
+B. Create an IAM policy with a condition which denies access when the IP address range is not from the organization
+C. Configure the EC2 instance security group which allows traffic only from the organization’s IP range
+D. Create an IAM policy with VPC and allow a secure gateway between the organization and AWS Console
+ 
+Question #190Topic 1
+An organization has created one IAM user and applied the below mentioned policy to the user. What entitlements do the IAM users avail with this policy?
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "ec2: Describet",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch: ListMetrics",
+                "Cloudwatch: GetMetricStatistics",
+                "cloudwatch:Describe*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "autoscaling: Describe*",
+            "Resource": ""
+        }
+    ]
+}
+
+A. The policy will allow the user to perform all read only activities on the EC2 services
+B. The policy will allow the user to list all the EC2 resources except EBS
+C. The policy will allow the user to perform all read and write activities on the EC2 services
+D. The policy will allow the user to perform all read only activities on the EC2 services except load Balancing
+
+Question #191Topic 1
+A user has enabled session stickiness with ELB. The user does not want ELB to manage the cookie; instead he wants the application to manage the cookie. What will happen when the server instance, which is bound to a cookie, crashes?
+A. The response will have a cookie but stickiness will be deleted
+B. The session will not be sticky until a new cookie is inserted
+C. ELB will throw an error due to cookie unavailability
+D. The session will be sticky and ELB will route requests to another server as ELB keeps replicating the
+ 
+Question #192Topic 1
+A user is observing the EC2 CPU utilization metric on CloudWatch. The user has observed some interesting patterns while filtering over the 1 week period for a particular hour. The user wants to zoom that data point to a more granular period. How can the user do that easily with CloudWatch?
+A. The user can zoom a particular period by selecting that period with the mouse and then releasing the mouse
+B. The user can zoom a particular period by double clicking on that period with the mouse
+C. The user can zoom a particular period by specifying the aggregation data for that period
+D. The user can zoom a particular period by specifying the period in the Time Range
+ 
+Question #193Topic 1
+A user has created an Auto Scaling group with default configurations from CLI. The user wants to setup the
+CloudWatch alarm on the EC2 instances, which are launched by the Auto Scaling group. The user has setup an alarm to monitor the CPU utilization every minute. Which of the below mentioned statements is true?
+A. It will fetch the data at every minute but the four data points [corresponding to 4 minutes] will not have value since the EC2 basic monitoring metrics are collected every five minutes
+B. It will fetch the data at every minute as detailed monitoring on EC2 will be enabled by the default launch configuration of Auto Scaling
+C. The alarm creation will fail since the user has not enabled detailed monitoring on the EC2 instances
+D. The user has to first enable detailed monitoring on the EC2 instances to support alarm monitoring at every
+ 
+Question #194Topic 1
+A user has created a VPC with public and private subnets using the VPC wizard. Which of the below mentioned statements is not true in this scenario?
+A. The VPC will create a routing instance and attach it with a public subnet
+B. The VPC will create two subnets
+C. The VPC will create one internet gateway and attach it to VPC
+D. The VPC will launch one NAT instance with an elastic IP
+ 
+Question #195Topic 1
+A user has configured ELB with a TCP listener at ELB as well as on the back-end instances. The user wants to enable a proxy protocol to capture the source and destination IP information in the header. Which of the below mentioned statements helps the user understand a proxy protocol with TCP configuration?
+A. If the end user is requesting behind a proxy server then the user should not enable a proxy protocol on ELB
+B. ELB does not support a proxy protocol when it is listening on both the load balancer and the back-end instances
+C. Whether the end user is requesting from a proxy server or directly, it does not make a difference for the proxy protocol
+D. If the end user is requesting behind the proxy, then the user should add the "isproxy" flag to the ELB
+ 
+Question #196Topic 1
+A user has launched 5 instances in EC2-CLASSIC and attached 5 elastic IPs to the five different instances in the US East region. The user is creating a VPC in the same region. The user wants to assign an elastic IP to the VPC instance. How can the user achieve this?
+A. The user has to request AWS to increase the number of elastic IPs associated with the account
+B. AWS allows 10 EC2 Classic IPs per region; so it will allow to allocate new Elastic IPs to the same region
+C. The AWS will not allow to create a new elastic IP in VPC; it will throw an error
+D. The user can allocate a new IP address in VPC as it has a different limit than EC2
+ 
+Question #197Topic 1
+A user has created a subnet in VPC and launched an EC2 instance within it. The user has not selected the option to assign the IP address while launching the instance. Which of the below mentioned statements is true with respect to this scenario?
+A. The instance will always have a public DNS attached to the instance by default
+B. The user can directly attach an elastic IP to the instance
+C. The instance will never launch if the public IP is not assigned
+D. The user would need to create an Internet gateway and then attach an elastic IP to the instance to connect
+ 
+Question #198Topic 1
+An organization has applied the below mentioned policy on an IAM group which has selected the IAM users.
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+    ]
+}
+
+What entitlements do the IAM users avail with this policy?
+
+A. The policy is not created correctly. It will throw an error for wrong resource name
+B. The policy is for the group. Thus, the IAM user cannot have any entitlement to this
+C. It allows full access to all AWS services for the IAM users who are a part of this group
+D. If this policy is applied to the EC2 resource, the users of the group will have full access to the EC2
+ 
+Question #199Topic 1
+A user is configuring a CloudWatch alarm on RDS to receive a notification when the CPU utilization of RDS is higher than 50%. The user has setup an alarm when there is some inactivity on RDS, such as RDS unavailability. How can the user configure this?
+A. Setup the notification when the CPU is more than 75% on RDS
+B. Setup the notification when the state is Insufficient Data
+C. Setup the notification when the CPU utilization is less than 10%
+D. It is not possible to setup the alarm on RDS
+ 
+Question #200Topic 1
+George has shared an EC2 AMI created in the US East region from his AWS account with Stefano. George copies the same AMI to the US West region. Can Stefano access the copied AMI of Georges account from the US West region?
+A. No, copy AMI does not copy the permission
+B. It is not possible to share the AMI with a specific account
+C. Yes, since copy AMI copies all private account sharing permissions
+D. Yes, since copy AMI copies all the permissions attached with the AMI
+ 
+
