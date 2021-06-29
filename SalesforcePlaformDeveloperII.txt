@@ -1,0 +1,1330 @@
+NO.1 A developer is working on code that requires a call to an external web service from a batch.
+How should the developer enable this functionality?
+A. Implement a custom System.CalloutException class.
+B. Include Database.AllowCallout() in the class definition.
+C. Implement an @future method for the callout, and invoke it from the batch.
+D. Specify "callout=true" in the batch implementation.
+Answer: B
+
+NO.2 A developer has written the following method: static void processList(List<sobject> input){
+Which code block can be used to call the method?
+A. ProcessList (acc)
+B. ProcessList ( [FIND 'Acme" ' RETURNING Account] )
+C. ProcessList([SELECT Id, Name FROM sObject WHERE Type = 'Account'
+D. For Account acc : [SELECT Id, Name FROM Account]
+Answer: D
+
+NO.3 What level can a hierarchy custom setting be defined for? Choose 3 answers
+A. Users
+B. Groups
+C. Profiles
+D. Roles
+E. Organization
+Answer: A C E
+
+NO.4 What is the correct order of execution for Visualforce Page "postback" requests (when user
+interaction requires a page update)
+A. 1: Decode View State
+2: Evaluate expressions and method calls for the main page and custom components
+3: Upon successful completion, Evaluate the action that triggered the postback
+4: Upon successful completion, Update data and redirect user/update view state
+5: HTML sent to browser
+B. 1: Evaluate expressions and method calls for the main page and custom components
+2: Decode View State
+3v Upon successful completion, Update data and redirect user/update view state
+4: Upon successful completion, Evaluate the action that triggered the postback
+5: HTML sent to browser
+C. 1: Decode View State
+2: Evaluate expressions and method calls for the main page and custom components
+3: Upon successful completion, Update data and redirect user/update view state
+4: Upon successful completion, Evaluate the action that triggered the postback
+5: HTML sent to browser
+Answer: A
+
+NO.5 Which of the following variables are not transmitted in the view state? Choose two answers
+A. Private
+B. Transient
+C. Public
+D. Static
+Answer: B D
+
+NO.6 Given the following code, what value Will be output in the logs by line #8? 1 Contact con = new
+Contact( LastName ='Smith', Department = 'Admin') 2 insert con; 3 Contact insertedContact=[select
+Name from Contact where id=zcon.Id]; 4 Savepoint sp_admin = Database.setSavepoint(); 5
+con.Department = 'HR'; D} 6 update con; 7 Database.rollback(sp_admin); 8
+console.log(Limits.getDmlStatements());
+A. 2
+B. 3
+C. 4
+D. 5
+Answer: C
+
+NO.7 A company has 20,000 rows in the Account object and 2 million rows in the Sales_Data_c
+object that is related to Account. All of the records in the Sales_Data_c object have a field that
+contains the string 'Le.' Which statement will throw a "Too many query rows" exception? Choose 2
+answers
+A. List< List< sObject>> result= [FIND 'Le' IN ALL FIELDS RETURNING Sales_Data_c(Id)];
+B. List< Account> result = [SELECT Id, (SELECT Id FROM Sales_Data_r) FROM Account]
+C. List< sObject> result = Database.query('SELECT Id FROM Sales_Data_c LIMIT 50000');
+D. List< AggregateResult> result = [SELECT count(Id) total FROM Sales_Data_c];
+Answer: A B
+
+NO.8 JavaScript remote actions need be either a _______ or _______ class and must be _______.
+A. Public or global and must be static.
+B. Private or global and must be static.
+C. Public or TestVisible and must be static.
+Answer: A
+
+NO.9 A developer would like to use jQuery in a Visualforce page. Which markup can be used to load
+the library on the page?
+A. < apex:include value="{ !$Resource.jQuery}"
+B. < apex:includeScript value="{ !$Resource.jQuery}
+C. < apex: script value="{ l$Resource.jQuery}
+D. < apex:includeJS value="{ !$Resource.jQuery}
+Answer: B
+
+NO.10 When should a developer use the transient keyword? Choose 2 answers
+A. To declare an Apex variable as type-less when developing with dynamic Apex.
+B. To prevent Apex interface definitions being included in the Apex-based partner WSDL.
+C. To prevent Apex controller variables being sent to the Visualforce page as view state.
+D. To exclude Apex class variables from getting serialized if they are in a serializable class
+Answer: C D
+
+NO.11 A customer has a single Visualforce page that allows each user to input up to 1500 sales
+forecasts and instantly view pivoted forecast calculations. Users are complaining that the page is
+loading slowly, and they are seeing error messages regarding heap and view state limits. What are
+three recommendations to optimize page performance?
+A. Segregate calculation functionality from input functionality.
+B. Specify the list of sales forecasts as transient.
+C. Implement pagination and reduce records per page.
+D. Create formula fields to compute pivoted forecast calculations.
+E. Use JavaScript Remoting instead of controller actions.
+Answer: C D E
+
+NO.12 What is the output of the following code snippet? l Contact con = new Contact( LastName =
+'Smith', Department = 'Admin'); 2 insert con; 3 4 Savepoint sp_finance = Database.setSavepoint(); 5
+con.Department
+'finance'; 6 update con; 7 8 Savepoint sp_hr = Database.setSavepoint(); 9 con.Department = 'HR'; 10
+update con; 11 12 Database.rollback(sp_finance); l3 Database.rollback(sp_hr);
+A. The contact record will be saved ME department value HR.
+B. A runtime error will be thrown on line 12.
+C. A runtime error will be thrown on line 13.
+D. The contact record will be saved with department value Finance.
+Answer: C
+
+NO.13 A company exposes a REST web service and wants to establish two-way SSL between
+Salesforce and the REST web service. A certificate signed by an appropriate certificate authority has
+been provided to the developer. What modification is necessary on the Salesforce side? Choose 2
+answers
+A. Create an entry for the certificate in Certificate and Key Management.
+B. Configure two-factor authentication with the provided certificate.
+C. Update the code to use HttpRequest.setHeader() to set an Authorization header.
+D. Update the code to use HttpRequest .setClientCertificateName
+Answer: A D
+
+NO.14 A developer is using a third-party JavaScript library to create a custom user interface in
+Visualforce. The developer needs to use JavaScript to get data from a controller method in response
+to a user action. How can the developer accomplish this?
+A. Use to create a JavaScript wrapper for the controller method.
+B. Use the @RemoteAction annotation on the method definition with JavaScript Remoting.
+C. Use the $Controller global variable to access the controller method via JavaScript.
+D. Use to enable JavaScript support for the controller method.
+Answer: B
+
+NO.15 When should you use the "transient" property on variables?
+A. Variables that you want transmitted as part of the view state. Static variables also don't get
+transmitted
+B. Variables that you don't want transmitted as part of the view state. Static variables also don't get
+transmitted
+C. Static variables that you want transmitted as part of the view state to save space
+D. Large variables in order to save space
+Answer: B
+
+NO.16 A Salesforce developer created a Contact validation rule so that the Email field cannot
+contain "abc.com." There is an active workflow rule that updates the Email field of a contact record
+to "test@abc.com" if the contact's First Name field contains the word "Test." A customer tries to
+create a Contact record with the first name "Test Contact" and the email "test@test.com." What
+behavior will be observed?
+A. The customer will receive a system error message.
+B. The contact record will be created with the email address "test@abc.com."
+C. The customer will receive a validation error message.
+D. The contact record will be created with the email address test@test.com.
+Answer: B
+
+NO.17 Choose the correct definition for <apex:message>
+A. Standard Salesforce formatting, throws a specific message on a page
+B. Standard Salesforce formatting, shows all errors that occur on page. Can add more messages
+through the
+"ApexPages.addMessage" function
+C. A single message, without formatting, that can be associated with a specific component on the
+page
+D. No formatting; displays all errors on a page
+Answer: C
+
+NO.18 A developer writes the following Apex trigger so that when a Case is closed, a single Survey
+record is created for that Case. The issue is that multiple Survey-c records are being created per Case.
+trigger CaseTrigger on Case (after insert, after update) { List<Survey__c> createSurveys = new
+List<Survey__c>(); for (Case c :
+trigger.new) { if (c.IsClosed && (trigger.isInsert ll trigger.isUpdate &&
+trigger.oldMap.get(c.Id).IsClosed == false)) { createSurveys.add(new Survey__c(Case__c = c.Id));
+insert createSurveys; } } What could be the cause of this issue?
+A. A user is creating the record as Closed
+B. A workflow rule is firing with a Create Task action.
+C. A workflow rule is firing with a Field Update action.
+D. A user is editing the record multiple times.
+Answer: D
+
+NO.19 Trigger on Contact ensures that whenever a Contact's custom field "User Level" is given the
+value "President," the related Community User's Role is updated as Manager. The Apex unit test
+method for testing this functionality is failing for a mixed DML error. What is one way that this
+problem can be solved?
+A. Query the user roles before the test method's startTest () statement.
+B. Create test data for the roles before startTest 0.
+C. Put the update of contact event inside startTest() and stopTest().
+D. Use a System. runAs () block to update the contact.
+Answer: D
+
+NO.20 What is the output of the following code snippet? 1 Contact con = new Contact( LastName =
+'JOHNSON', LeadSource = 'Web') 2 3 Savepoint sp = Database.setSavepoint(); 4 insert con; 5
+Database.rollback(sp); 6 7 con.LeadSource = 'Email' 8 insert con;
+A. A runtime error will be thrown on line 5.
+B. The contact record will be inserted with Leadsource value Web.
+C. A runtime error will be thrown on line 8.
+D. The contact record will be inserted with Leadsource value Email.
+Answer: C
+
+NO.21 What is the potential exception that can be thrown from this SOQL query: Account a =
+[SELECT Id, (SELECT Id FROM Contacts) FROM Account] Choose 2 answers
+A. QueryException if no records are returned.
+B. QueryException if more than one record is returned.
+C. TypeException if a Contact is returned as part of the query.
+D. NullPointerException if no records are returned.
+Answer: A B
+
+NO.22 A developer has been asked to prevent Accounts from being deleted if there is a related
+Contact that has the Do_Not_Delete_c checkbox checked. How can the developer accomplish this?
+A. Create a Validation Rule on the Contact object.
+B. Create a Before Delete Trigger on the Account object.
+C. Create a Validation Rule on the Account object.
+D. Create a Before Delete Trigger on the Contact object
+Answer: B
+
+NO.23 Which of the following standard fields are indexed? Choose three answers
+A. Name
+B. CreatedBy
+C. SystemModStamp
+D. LastModifedDate
+E. RecordType
+Answer: A C E
+
+NO.24 In which of the following scenarios would it be acceptable to use programmatic sharing
+instead of declarative sharing?
+A. Every record created by sales users needs to be visible to their respective manager
+B. Poor performance when using native sharing components
+C. Team functionality is required on custom objects
+D. Here is an existing, external system of truth for user access assignments which will continue to
+drive access and be integrated with salesforce
+E. You need to change record access to read/write for all users utilising a lightning component
+Answer: B C D
+
+NO.25 What is the value of "i" printed by the System.debug statement, if the value of "j" is 2 at the
+end of the transaction? insert new Account[]{new Account(Name = 'yyy'), new Account(Name =
+'yyy')}; integer i = 0; integer j; for (Account[] tmp : [SELECT Id FROM Account WHERE Name = 'yyy'])
+j=tmp.size(); i++; System.debug(i);
+A. 0
+B. 1
+C. 2
+D. 3
+Answer: B
+
+NO.26 What is a limitation of a "getxxx" method (for example, getName) in a custom Visualforce
+controller?
+A. The method cannot return SObjects.
+B. The method cannot use DML operations.
+C. The method cannot return Apex classes.
+D. The method cannot use SOSL queries.
+Answer: B
+
+NO.27 Which statement is true about scheduled Apex? Choose 3 answers
+A. The schedule of an Active scheduled Apex class cannot be updated through the Salesforce User
+Interface.
+B. Scheduled Apex is executed only when system resources are available.
+C. Scheduled Apex only supports asynchronous callouts through the use of @future methods and
+Apex Batches.
+D. Scheduled Apex classes can only be defined by extending the Schedule base class.
+E. There is no limit on Scheduled Apex jobs because they are executed asynchronously
+Answer: A B C
+
+NO.28 What can the Apex Continuation class be used for?
+A. Chaining multiple Queueable Apex jobs to be processed one after another.
+B. Making asynchronous callouts to SOAP or REST Web Services from Visualforce.
+C. Maintaining an Apex transaction across multiple DML statements.
+D. Progressing records to the next stage of an approval process in Apex.
+Answer: B
+
+NO.29 What is the correct syntax for calling a controller action from a Visualforce page and updating
+part of the page once the action is completed? Choose 2 answers
+A. < apex: commandFunction action="{ !Save}" value="Save" rendered="thePageBlock"/>
+B. < apex:actionFunction action="{ !Save}" name="Save" rerender="thePageBlock"/>
+C. < apex:commandButton action="{ !Save}" value="Save" redraw="thePageBlock"/>
+D. < apex:actionSupport action="{ !Save} " event="" rerender="thePageBlock"/>
+Answer: B D
+
+NO.30 A developer has a Debug method within a class, which is invoked hundreds of times. What is
+the optimal functionality in the Developer Console to count the number of calls made to the method
+?
+A. The "Execution Log" Panel.
+B. The "Execution Stack" Panel.
+C. The "Executed Units" tab under the Execution Overview Panel.
+D. The "Execution Tree" tab under the Stack Tree Panel.
+Answer: C
+
+NO.31 A developer created a Visualforce page that has a custom controller that navigates to an
+external website after the' command button is pressed. What is the recommended way to test this
+functionality?
+A. Use .getURL() on the result of the action method and System.assertEquals () to compare the
+resulting URL.
+B. Use ApexPages.currentPage () .getUrl () and System.assertElquals () to compare the end URL.
+C. Use Test.getCurrentPage() .getUrl () and System.assertEquals () to compare the end URL.
+D. Test the navigation by executing the use case through the browser and manually inspecting the
+resulting URL
+Answer: A
+
+NO.32 Which use case is an appropriate fit for the @future asynchronous Apex method? Choose 2
+answers
+A. A developer has jobs that need larger query results than regular transactions allow.
+B. A developer needs to segregate DML operations and bypass the mixed save DML error.
+C. A developer has long-running jobs with large data volumes that need to be performed in batchesD. A developer has long-running methods and needs to prevent delaying an Apex transaction.
+Answer: B D
+
+NO.33 How can Apex be used with Visual Workflow?
+A. To set the version of a Flow being run.
+B. To start a Flow automatically.
+C. To add custom styling to a Flow.
+D. To control access to a Flow
+Answer: B
+
+NO.34 What is a technique to maximize code re-use within Visualforce pages? Choose 3 answers
+A. Referencing an existing page With .
+B. Creating Visualforce Templates With .
+C. Defining reusable page regions with .
+D. Creating reusable page sections with .
+E. Creating reusable Visualforce Components with .
+Answer: A B E
+
+NO.35 A developer is writing a Visualforce page to display a list of all of the checkbox fields found on
+a custom object. What is the recommended mechanism the developer should use to accomplish this?
+A. Schema class
+B. Apex API
+C. Schema Builder
+D. Metadata API
+Answer: A
+
+NO.36 An integration user makes a successful login() call via the SOAP API. What can be used in the
+SOAP header to provide server authorization for subsequent API requests?
+A. Named Credentials
+B. Session ID
+C. OAuth access token
+D. Security token
+Answer: B
+
+NO.37 Which object can a developer use to programmatically determine who is following a specific
+User record in Chatter?
+A. EntitySubscription
+B. FollowHistory
+C. FollowSubscription
+D. Entityfiistory
+Answer: A
+
+NO.38 What is a consideration when using bind variables with dynamic SOQL? Choose 2 answers
+A. Dynamic SOQL cannot reference fields on bind variables.
+B. Dynamic SOQL cannot use bind variables.
+C. Bind variables must be public or global.
+D. Bind variables must be in local scope.
+Answer: A D
+
+NO.39 What field type can be used in the WHERE clause to improve SOQL query performance?
+Choose 3 answers
+A. Email fields
+B. Name fields
+C. Telephone fields
+D. Lookup fields
+E. External Id fields
+Answer: B D E
+
+NO.40 A developer must create a way for external partners to submit millions of leads into
+Salesforce per day. How should the developer meet this requirement?
+A. Publicly expose a Visualforce page via Force.com Sites.
+B. Create a web service on Heroku that uses Heroku Connect.
+C. Host a Web-to-Lead form on the company website.
+D. Publicly expose an Apex Web Service via Force.com Sites.
+Answer: D
+
+NO.41 A developer has refactored an application and renamed an Apex class in a sandbox and now
+needs to deploy the changes to production. How can this be accomplished? Choose 2 answers
+A. Deploy the new Apex class with the Force.com Migration Tool and set the old name in
+destructiveChanges.xml.
+B. Use a changeset to both delete the old Apex class and deploy the new Apex class to production.
+C. Deploy the new Apex class, and then log in to the production environment and manually delete
+the class.
+D. Use the Force.com IDE to delete the old Apex class from the project and deploy the changes to
+production.
+Answer: A D
+
+NO.42 A developer needs to create a Visualforce page to override the standard New Contact Button.
+The page contains a field of for capturing the Contact's daytime preferred Phone number. The user
+has the option to select one of the four available phone types (Mobile, Home, Work, or Other) to be
+the primary contact number. Only if the "Other" Phone Type option is selected, the page must display
+a text box for the User to provide the other Phone number. How can this requirement be met?
+Choose 2 answers
+A. Use the rendered attribute on the Other Phone Input text field to control its selective display.
+B. Use the apex:rendered tag to enclose the Other Phone input text field to control its selective
+display.
+C. Use the rerender attribute on the Phone Type select Iist's apex:actionsupport to refresh the Other
+Phone text field.
+D. Use apex:actionsupport tag to enclose the Phone Type select list to refresh the Other Phone text
+field.
+Answer: A C
+
+NO.43 A developer has created a solution using the SOAP API for authenticating Communities users.
+What is needed when issuing the login()Call? Choose 2 answers
+A. Organization Id
+B. Security Token
+C. Session Id
+D. Username and Password
+Answer: B D
+
+NO.44 What is a valid return type for the following SOSL query? [FIND 'map"' IN ALL FIELDS
+RETURNING Account (Id, Name) , Contact, Opportunity,Lead]
+A. List< sobject>
+B. List < List< sObject>>
+C. List< AggregateResult>
+D. List< Account>
+Answer: B
+
+NO.45 A developer must create a custom pagination solution. Users will access the solution on a
+mobile device and will rarely access subsequent pages of records. Performance is crucial. Which
+approach is optimal?
+A. Use OFFSET CURSOR in SOQL queries.
+B. Use a StandardSetController.
+C. Use @Cache annotation in the controller.
+D. Use OFFSET in SOQL queries.
+Answer: D
+
+NO.46 A developer writes the following code: public with sharing class OrderController { public
+PaqeReference sendOrder() { Order__c order = new Order__c insert order; ExternalOrder
+externalOrder = new ExternalOrder (order); Http h = new Http(); HttpRequest req = new
+HttpRequest(); req.setEndpoint('https://www.example.org/v1/orders'); req.setMethod('POST');
+req.setBody(JSON.serialize(externalOrder)); HttpResponse res = h.send(req); order =
+(ExternalOrder)JSON.deserialize(res.getBody(),ExternalOrder.class); } } While testing the code, the
+developer receives the following error message: System.CalloutException : You have uncommitted
+work pending What should the developer do? Choose 2 answers
+A. Use the asyncSend() method of the HTTP class to send the request in async context.
+B. Ensure all callouts are completed prior to executing DML statements.
+C. Move the web service callout into an @future method.
+D. Use Database.insert (order, true) to immediately commit any database changes.
+Answer: B C
+
+NO.47 A developer has written a Visualforce page to create a new account with the following
+markup: The Visualforce page has extra logic for validating the website field. How can the developer
+add an error message next to the website field if the submitted value isn't valid?
+A. Use Account . fields .website . addError (message)
+B. Use throw new SObjectException(message).
+C. Use Account . website . addError (message)
+D. Use ApexPages . addMessage (message)
+Answer: D
+
+NO.48 A developer needs test data for Apex test classes. What can the developer use to provide test
+data to the test methods? Choose 2 answers
+A. List ls = Test. loadData (Lead.sObjectType, 'myTestLeads');
+B. MyDataFactory. createTestRecords (10)
+C. Database . createTestRecords (10)
+Answer: A B
+
+NO.49 During the order of execution of a Visualforce page GET request, what happens after this
+step: Evaluate constructors on controllers and extensions?
+A. Evaluate constructors and expressions on custom components.
+B. Create view state if < apex: form> exists.
+C. Send the HTML response to the browser.
+D. Evaluate expressions, action attributes, and method calls.
+Answer: A
+
+NO.50 A company wants to create a dynamic survey that navigates users through a different series
+of questions based on their previous responses. What is the recommended solution to meet this
+requirement?
+A. Dynamic Record Choice
+B. Lightning Process Builder
+C. Visualforce and Apex
+D. Custom Lightning application
+Answer: C
+
+NO.51 What is the <apex:actionSupport> tag used for in Visualforce pages?
+A. To provide help and support content for buttons and links.
+B. To trigger a second action when a button or link is clicked.
+C. To trigger controller actions in response to DOM element events.
+D. To create a Javascript function that can trigger a controller action
+Answer: C
+
+NO.52 A developer wants to create a Visualforce page that allows a user to search for a given
+account by Name. If the account is found, the account details should be populated on screen. If no
+account is found, an error message should be displayed to the user. How can this be accomplished?
+Choose 2 answers
+A. Use the (apex: information) tag to display the error message.
+B. Use the ApexPages.addMessage () method to add the error message.
+C. Use the < apex:pageMessages > tag to display the error message.
+D. Use the account.addError( ) method to add the error message.
+Answer: B C
+
+NO.53 A company requires an external system to be notified whenever an account is updated. What
+LimitException could the following code trigger? trigger AccountTrigger on Account (after update) {
+for (Account updatedAccount : Trigger.new) {
+AccountTriggerHelper.notinyxternalSystem(updatedAccount.id); } } public class AccountTriggerHelper
+{ future(callout=true) public static void notinyxternalSystemlId accountId) { Account acc = [Select id,
+name from.Account where accountId = :accountId]; //Instantiate a new http object Http h = new
+Http(); HttpRequest req = new HttpRequest(); req.setEndpoint('http://example.org/restService');
+req.setMethod('POST'); req.setBody(JSON.serialize(acc)); HttpResponse res = h.send(req); } }
+A. System.LimitException: Too many future calls
+B. System.LimitException: Too many callouts
+C. System.LimitException: Too many SOQL queries
+D. System.CalloutException: Callout from triggers are currently not supported
+Answer: A
+
+NO.54 Which statement is true about using ConnectApi namespace (also called Chatter in Apex)?
+Choose 2 answers
+A. Chatter in Apex methods honor the 'with sharing' and 'without sharing' keywords.
+B. Chatter in Apex operations are synchronous, and they occur immediately.
+C. Chatter in Apex methods do not run in system mode; they run in the context of the current user.
+D. Many test methods related to Chatter in Apex require the BIsTest (SeeAllData=true) annotation
+Answer: C D
+
+NO.55 Choose the correct definition for <apex:pageMessages>
+A. Standard Salesforce formatting, throws a specific message on a page
+B. Standard Salesforce formatting, shows all errors that occur on page. Can add more messages
+through the
+"ApexPages.addMessage" function
+C. A single message, without formatting, that can be associated with a specific component on the
+page
+D. No formatting; displays all errors on a page B: Standard Salesforce formatting, shows all errors
+that occur on page. Can add more messages through the "ApexPages.addMessage" function
+Answer: B
+
+NO.56 Choose the correct definition for <apex:actionPoller>
+A. Allows for controller methods to be called directly from Javascript. Must be encapsulated in tags.
+Unlike actionSupport, these functions can be called directly from Javascript code
+B. Sends an AJAX request according to the time interval you specify. If this ever gets re-rendered, it
+resets
+C. Adds AJAX support to another component (e.g. onClick, onMouseUp, onFocus, etc.)
+D. Can be associated with an AJAX request (actionFunction/actionSupport/actionPoller) and shows
+content conditionally depending on the status of the request (in progress/complete). Use the "id"
+field to specify name; use "status" field on related components to connect them
+E. Signifies which components should be processed by the server when an AJAX request is generated
+F. Signifies which components should be processed by the server when an AJAX request is generated
+Answer: B
+
+NO.57 A developer needs to create a Lightning page for entering Order Information. An error
+message should be displayed if the zip code entered as part of the Order's shipping address is not
+numeric. What is a recommended way for the error message be displayed to the end user?
+A. Use the apex:message tag to display errors.
+B. Use the aura:component tag to display errors.
+C. Use the ui:outputText tag to display errors.
+D. Use the ui:inputDefaultError tag to display errors
+Answer: D
+
+NO.58 What is a consideration when testing batch Apex? Choose 2 answers
+A. Test methods must execute the batch with a scope size of less than 200 records.
+B. Test methods must call the batch execute () method once.
+C. Test methods must use the @isTest (SeeAllData=true) annotation.
+D. Test methods must run the batch between Test. startTest () and Test.stopTest
+Answer: A D
+
+NO.59 A developer is building a Visualforce page that interacts with external services. Which
+interface should the developer implement to test this functionality? Choose 2 answers
+A. HTTPCalloutMock
+B. HTTPRequestMock
+C. HTTPResponseMock
+D. StaticResourceCalloutMock
+Answer: A D
+
+NO.60 Which statement is true regarding the use of user input as part of a dynamic SOQL query?
+A. Free text input should not be allowed, to avoid SOQL injection.
+B. The String.format () method should be used to prevent injection.
+C. Quotes should be escaped to protect against SOQL injection.
+D. The string should be URL encoded by the input form to prevent errors.
+Answer: C
+
+NO.61 What is the top-level namespace that provides the ability to use Chatter in Apex?
+A. RestApi
+B. ChatterApi
+C. FeedApi
+D. ConnectApi
+Answer: D
+
+NO.62 A developer wants to retrieve and deploy metadata, perform a simple CSV export of query
+results, and debug APEX Rest calls by viewing the JSON responses. Which tool should the developer
+use?
+A. Developer Console
+B. Force.com Migration Tool
+C. Workbench
+D. Force.com IDE
+Answer: C
+
+NO.63 A developer needs to create a service that will process an email sent to it and create an
+account and contact using the contents of the email as data for the records. How might a developer
+accomplish this requirement?
+A. Use the Apex Inbound Email Handler.
+B. Use the Fuel API with Email Data Extensions.
+C. Use Heroku Data Clips to Process Email.
+D. Use Auto-launched Flow and Process Builder.
+Answer: A
+
+NO.64 Which tool in the Developer Console can a developer use to monitor the cardinality and the
+cost of a SOQL query?
+A. View State tab
+B. Query Plan Tool
+C. Audit Log
+D. Query Activity Tool
+Answer: B
+
+NO.65 A developer wants to retrieve and deploy metadata, perform simple CSV export of query
+results, and debug Apex REST calls by viewing JSON responses. Which tool should the developer use?
+A. Developer Console
+B. Force.com Migration Tool
+C. Workbench
+D. Force.com IDE
+Answer: C
+
+NO.66 What tool in the Developer Console contains information on SOQL query Cardinality?
+A. Checkpoints tab
+B. Query Editor
+C. Query Plan Tool
+D. Log Inspector
+E. View State Tab
+Answer: C
+
+NO.67 A developer has been asked to create code that will meet the following requirements:
+Receives input of:
+Map<Id, Project__c>, List<Account> Performs a potentially long-running callout to an outside web
+service Provides a way to confirm that the process executed successfully Which asynchronous feature
+should be used?
+A. @future (callout=true)
+B. Database.AllowsCallouts interface
+C. Schedulable interface
+D. Queueable interface
+Answer: A
+
+NO.68 A developer has created the following trigger: trigger ProcessDoNotCall on Contact (after
+update) { List<Contact> lstCon = [SELECT Id, DoNotCall, Department FROM Contact WHERE
+Department = 'HR' AND Id IN :Trigger.new]; for(Contact c : lstCon) c.DoNotCall= true; update lstCon; }
+The developer executes the following code anonymously in the Developer Console. Assume that the
+record exists in Salesforce.
+Contact con = new Contact(Id='003oOOOOOOVHXOm',Department = 'HR') update con; Which
+behavior will the developer observe?
+A. The code will throw an exception because the maximum trigger depth has been exceeded.
+B. The code will throw an exception, saying that the record cannot be updated in an After Update
+trigger.
+C. The code will throw an exception in Anonymous Apex, indicating that the Id field is read-only.
+D. The contact record will be saved and the contact record's DoNotCall field will be set to true.
+Answer: A
+
+NO.69 The maximum view state size of a visualforce page is
+A. 65kb
+B. 135kb
+C. 165kb
+D. 256kb
+E. 1mb
+Answer: B
+
+NO.70 A developer has created a Visualforce page for inputting data and needs to display errors at
+the field level.
+What tag should the developer use?
+A. < apex:messages>
+B. < apex:pageMessages>
+C. < apex:message>
+D. < apex:pageMessage>
+Answer: C
+
+NO.71 A custom field Exec_Count_c of type Number is created on an Account object. An account
+record with value of "1" for a: Exec_Count_c is saved. A workflow field update is defined on the
+Exec_Count_c field, to increment its value every time an account record is created or updated. The
+following trigger is defined on the account: trigger ExecOrderTrigger on Account (before insert,
+before update, after insert, after update) { for (Account accountInstance: Trigger.New) { if (Trigger .
+isBefore) { accountInstance . Exec_Count_c +=l; System. debug (accountInstance . Exec_Count_c); } } }
+What is printed from the System.debug statement?
+Output from System.debug in every iteration is separated with a delimiter.
+A. 1,2,3,3
+B. 1,2,3,4
+C. 2,2,4,4
+D. 2,2,3,3
+Answer: C
+
+NO.72 What should a developer do to invoke a SOAP web service from Apex? Choose 2 answers
+A. Invoke the web service from a trigger.
+B. Generate an Apex class from the WSDL.
+C. Annotate the method With @future (callout=true)
+D. Configure the remote site settings.
+Answer: B D
+
+NO.73 A developer has created an Order entry page that includes an <apex:outputLabel> tag for a
+field label. How can the developer ensure that the label text changes when the field label changes?
+A. Use FieldSetMember methods to control label text.
+B. Use the SObjectType variable to control label text.
+C. Use a custom label to manage the label text.
+D. Use the metadata API to update the label text.
+Answer: B
+
+NO.74 Within the System.Limit class, what would you call to get the number of calls made in your
+transaction?
+A. Get[typeOfLimit] --> (Ex. getDMLStatements())
+B. GetLimit[typeOfLimit] --> (Ex. getLimitDMLStatements())
+Answer: A
+
+NO.75 What is a limitation of compound fields?
+A. Are read-only unless accessed by Location and Address Apex classes.
+B. Can only be updated through individual field components.
+C. Are read-only when accessed through Visualforce pages.
+D. Cannot be queried through the use of Apex classes.
+Answer: B
+
+NO.76 A developer needs to compile a list of 105 for all Accounts and Opportunities that have the
+word "Acme" in their name' and are created today. Which statement provides the developer with the
+105?
+A. FIND "Acme" IN NAME FIELDS RETURNING Account (Id), Opportunity (Id) WHERE CreatedDate
+TODAY
+B. SELECT Id, AccountId FROM Opportunity WHERE CreatedDate = TODAY AND ( Name LIKE
+'%Acme'a' Account.Name LIKE '%Acme%'
+C. SELECT Id, ( SELECT Id FROM Opportunities WHERE CreatedDate = TODAY ) FROM Account WHERE
+" CreatedDate = TODAY AND Name LIKE '%Acme%'
+D. FIND "Acme"IN NAME FIELDS RETURNING Account (Id WHERE CreatedDate = TODAY), Opportunity
+(Id WHERE CreatedDate = TODAY)
+Answer: D
+
+NO.77 What is a best practice when unit testing a controller? Choose 2 answers
+A. Simulate user interaction by leveraging Test.setMock().
+B. Verify correct page references by using getURL()
+C. Access test data by using seeAllData=true.
+D. Set query parameters by using getParameters () .put
+Answer: B D
+
+NO.78 A developer is writing unit tests for the following method: public static Boolean
+isFreezing(String celsiusTemp) { if(String.isNotBlank(celsiusTemp) && celsiusTemp.isNumeric()) return
+Decimal.valueof(celsiusTemp) <= 0; return null; } Which assertion would be used in a negative test
+case?
+A. System.assertEquals(true, isFreezing(null));
+B. System. assertEquals (true, isFreezing( ' 0');
+C. System.assertEquals(null, isFreezing('asdf'));
+D. System.assertEquals(true, isFreezing('lOO'));
+Answer: C
+
+NO.79 A developer created a custom component to display an HTML table. The developer wants to
+be able to use the component on different Visualforce Pages and specify different header text for the
+table. Which tag should the developer use inside the component?
+A. < apex:variable>
+B. < apex:define>
+C. < apex:param>< meta charset="utf-8" />< apex:param>
+D. < apex:attribute>
+Answer: D
+
+NO.80 How can Apex class functionality be exposed for invocation from a Lightning process? Choose
+2 answers
+A. Expose the class as a custom REST API.
+B. Use the @InvocableMethod annotation.
+C. Extend the ProcessInvocable base class.
+D. Implement the Process.Plugin interface.
+Answer: B D
+
+NO.81 What log category should be used to see the limits in the Execution Overview of the
+Developer Console?
+A. System
+B. Profiling
+C. Apex Code
+D. Database
+Answer: B
+
+NO.82 The Contact object has a custom field called "Zone." Its data type is "Text" and field length is
+3. What is the outcome after executing the following code snippet in the org? List<Contact>
+contactsToBeInserted=new List<Contact>(); Contact contactInstance= new
+Contact(LastName='Smith', Department='Tech', Zone__c='IAD');
+contactsToBeInserted.add(contactlnstance); contactInstance= new Contact(LastName='Sm1th',
+Department='Tech', Zone__c='PITT'); contactsToBeInserted.add(contactlnstance);
+Database.insert(contactsToBeInserted,true);
+A. Both inserts succeed and the contact record that has the Zone value of 'PI'I'I" is set to NULL.
+B. A partial insert succeeds and the contact record that has the Zone value 'IAD' is inserted.
+C. Both inserts succeed and the contact record that has the Zone value of 'PITT" is truncated.
+D. An unhandled DML exception is thrown and no contact records are inserted.
+Answer: D
+
+NO.83 What is the most efficient way in Visualforce to show information based on data filters
+defined by an end-user for a large volume of data?
+A. Use an Apex controller to refine raw data based on data filters and store the result in a transient
+variable.
+B. Use an Apex controller to refine raw data based on data filters and store the result in a static
+variable.
+C. Use the rendered condition in Visualforce to limit data based on data filters.
+D. Use filter conditions in a SOQL query to limit data based on data filters.
+Answer: D
+
+NO.84 A developer has created a Visualforce page that uses a third-party JavaScript framework. The
+developer has decided to supply data to the JavaScript functions using JavaScript Remoting for Apex
+Controllers. What is the correct syntax to declare a remote method in Apex? Choose 2 answers
+A. @RemoteAction global static String getTable()
+B. @RemoteAction global String getTable()
+C. @RemoteAction public static String getTable()
+D. @Remoteobject global static String gettable AC
+Answer: A C
+
+NO.85 A developer has created a Batchable class that inserts Accounts. The Batchable class is
+running with batch size of 200, and is getting an error. The developer identifies the following code as
+problematic. trigger AccountTrigger on Account(after insert) { for( Account a : Trigger.new) {
+AccountHandler.insertPartnerAccount(a); } } public Class AccountHandler{ @future public static void
+insertPartnerAccount(Account a){ //perform processing if( a.Is_Partner__c) { Account partnerAccount
+= new Account(); //set values insert partnerAccount; } } } What governor limit or system limitation is
+the developer most likely violating?
+A. Too many DML statements in the batch execution context.
+B. Maximum trigger depth exceeded on the Account insert.
+C. Too many future calls in the batch execution context.
+D. Future method cannot be called from a batch method.
+Answer: D
+
+NO.86 A customer requires that when the billing address field on an Account gets updated, the
+address field on all its related contact records should reflect the same update. How can this
+requirement be met with minimal customizations?
+A. Create an After Trigger on Account to update its related contact records on update.
+B. Create a Workflow Rule on Account to update related child Contact records.
+C. Create a Lightning Process on Account to update related child Contact records.
+D. Create a scheduled batch job that updates all contact address fields based on the related Account
+record.
+Answer: C
+
+NO.87 How long is field history retained?
+A. 6 months
+B. 12 months
+C. 18 months
+D. 24 months
+E. 36 months
+Answer: C
+
+NO.88 A developer needs to write tests to ensure that code doesn't fail when it is deployed to a
+different organization.
+The developer also must ensure that the code works properly with organization sharing rules and
+ensure that the code mitigates errors due to limits. How can the developer meet these
+requirements? Choose 2 answers
+A. Create all test data before calling the Test. startTest () and Test .stopTest () methods.
+B. Handle all exceptions that are caught by adding an empty catch ( Exception e) statement.
+C. Use SeeAllData=true to avoid delaying tests due to creating test data.
+D. Use the runAs ( ) method to test the application in different user contexts.
+Answer: A D
+
+NO.89 A developer encounters an error that states that the Apex heap size is exceeded. Which
+technique may reduce heap size?
+A. Add the transient keyword to the variable definition.
+B. Move the variable definition inside the scope of the function.
+C. Use static variables instead of instance variables.
+D. Use SOQL for loops instead of standard SOQL queries.
+Answer: D
+
+NO.90 Invokable methods accept sObjects as parameters
+A. True
+B. False
+Answer: B
+
+NO.91 A developer is creating unit tests for code that makes SOAP web service callouts. The
+developer needs to insert some test data as a part of the unit tests setup. What are three actions to
+enable this functionality?
+A. Surround the callout with Test.startTest(), Test.stopTest().
+B. Surround the data insertion with Test.startTest(), Test.stopTest().
+C. Implement the WebServiceMock interface.
+D. Update code to call Test.setMock().
+E. Implement the HttpCalloutMock interface.
+Answer: C D
+
+NO.92 A developer needs to design a custom object that will be integrated into a back-end system.
+What should the developer do to ensure good data quality and to ensure that data imports,
+integrations, and searches perform well? Choose 2 answers
+A. Configure a custom field as unique.
+B. Configure a custom field as indexed.
+C. Configure a custom field as external ID.
+D. Configure a custom field as Salesforce ID.
+Answer: A C
+
+NO.93 A developer has written an After Update trigger on Account. A workflow rule and field update
+cause the trigger to repeatedly update the Account records. How should the developer handle the
+recursive trigger?
+A. Deactivate the trigger and move the logic into a Process or Flow.
+B. Deactivate the workflow rule to prevent the field update from executing.
+C. Use a static variable to prevent the trigger from executing more than once.
+D. Use a global variable to prevent the trigger from executing more than once.
+Answer: C
+
+NO.94 Which statement is true regarding both Flow and Lightning Process?
+A. Can use Apex methods with the @InvocableMethod annotation.
+B. Are both server-side considerations in the Order of Execution.
+C. Can use Apex that implements the Process. Plugin interface.
+D. Are able to be embedded directly into Visualforce pages.
+Answer: A
+
+NO.95 A developer receives a LimitException: Too many query rows: 50001 error when running
+code. What debugging approach using the Developer Console provides the fastest and most accurate
+mechanism to identify a specific component that may be returning an unexpected number of rows?
+A. Count the number of Row Limit warning messages in the Debug Logs.
+B. Add System.debug (System.getoueryRows () to the code to track SOQL usage.
+C. Filter the Debug Log on SOQL_EXECUTE_END statements to track the results of each SOQL Query.
+D. Use the Execution Overview to see the number of rows returned by each Executed Unit.
+Answer: C
+
+NO.96 What Visualforce tag can be used to display custom messages in pages using the Salesforce UI
+styling for errors, warnings, and other types of messages?
+A. < apex: customMessage>
+B. < apex:error>
+C. < apex:message>
+D. < apex:pageMessage>
+Answer: D
+
+NO.97 A user updates a number field on a record from the value of 1 to 2, and a workflow rule
+executes, incrementing the value to 3. Which statement is true regarding writing triggers in this case?
+Choose 2 answers
+A. Workflow rules will execute before triggers.
+B. Triggers will execute before and after workflow rules.
+C. Trigger.old will contain the user entered value of 2.
+D. Trigger.old will contain the initial value of 1.
+Answer: B D
+
+NO.98 Which API can be used to execute unit tests? Choose 3 answers
+A. Streaming API
+B. Test API
+C. Tooling API
+D. SOAP API
+E. Metadata API
+Answer: C D E
+
+NO.99 Where in Apex execution can a callout be made? Choose 2 answers
+A. Trigger context.
+B. In @future context.
+C. After SOQL queries.
+D. After DML operations
+Answer: B C
+
+NO.100 A developer has built a multi-page wizard using a single Custom Controller to query and
+update data. Users are complaining that the pages are loading slowly. What will improve
+performance? Choose 3 answers
+A. Reducing the view state.
+B. Using actionRegion and rerender.
+C. Turning off the standard stylesheet.
+D. Setting the Apex Page attribute cache=true.
+E. Using selective queries.
+Answer: A D E
+
+NO.101 A developer must create a custom pagination solution. While users navigate through pages,
+if the data is changed from elsewhere, users should still see the cached results first accessed. How
+can the developer meet these requirements?
+A. Use @Cache annotation.
+B. Use a StandardSetController.
+C. Use OFFSET in SOQL queries.
+D. Use OFFSET WITH CACHE in SOQL queries
+Answer: B
+
+NO.102 What is a benefit of using list custom settings?
+A. Ability to include more field type options than custom objects.
+B. Ability to control sharing and visibility of custom setting data.
+C. Ability to provide more efficient access than custom objects.
+D. Ability to delegate administrator rights to standard users.
+Answer: C
+
+NO.103 An Apex test method is testing a Visualforce page's controller, which queries for all
+Opportunities in Salesforce with StageName = 'Closed'. There are 10,000 existing records that match
+the criteria. What is the best practice for accessing data in the test method?
+A. Create test data in the test method and use seeAllData=true.
+B. Query existing data in the test method and use seeAllData=true.
+C. Create test data in the test method and use seeAllData=false.
+D. Use @testVisible on the relevant property of the controller
+Answer: C
+
+NO.104 A developer has generated Apex code from a WSDL for an external web service. The web
+service requires Basic authentication. What code should the developer use to authenticate?
+A. Http. setHeader ( 'Authorization' , 'Basic QthZGprjpchVuIHNchFtZQ==');
+B. Stub . inputhth-Ieader3_x.put ('Authorization' , 'Basic QthZGprjpchVuIHIQchE'tZQ:'
+C. Http. setAuthentication( 'Basic QthZGprjpchVuIHNchFtZQ:'
+D. Stub.authentication.put ( 'Authorization' , 'Basic QthZGprjpchVuIHNchFtZQ=='
+Answer: B
+
+NO.105 Which type of controller is best suited when you want all of the basic DML functions from
+an object's normal new/edit page?
+A. Standard Controller
+B. Standard List/Set Controller
+C. Controller Extensions
+D. Custom Controller
+Answer: A
+
+NO.106 Which of the following elements can be members of a public group? Choose 3
+A. Territories
+B. Case Teams
+C. Users
+D. Roles
+E. Profiles
+Answer: A C D
+
+NO.107 What does the System. runAs () method enforce based on the target user?
+A. Object CRUD permissions
+B. Record sharing
+C. Field-level permissions
+D. License limits
+Answer: B
+
+NO.108 A developer has created a Visualforce page that uses a thirdparty JavaScript framework. The
+developer has decided to supply data to the JavaScript functions using JavaScript Remoting for Apex
+Controllers. What is the correct syntax to declare a remote method in Apex? Choose 2 answers
+A. @RemoteAction public static String getTable()
+B. @RemoteAction global String getTable()
+C. @RemoteAction global static String getTable()
+D. @Remoteobject ' global static String gettable
+Answer: A C
+
+NO.109 If the "PageReference.setRedirect" Apex function is set to False, what type of request is
+made?
+A. Get request
+B. Postback request
+C. If PageReference points to the same controller and subset of extensions, postback request,
+otherwise get request
+Answer: C
+
+NO.110 A company requires that a child custom record is created when an Order record is inserted.
+The company's administrator must be able to make changes to the solution. What is the
+recommended solution for implementing this requirement?
+A. Create a Visual Workflow that will create the custom child record when the Order is inserted.
+B. Create a Force.com Workflow Rule to create the custom child record when the Order is inserted.
+C. Create an Apex Trigger to create the custom child record when the Order is inserted.
+D. Create a Lightning Process to create the custom child record when the Order is inserted.
+Answer: D
+
+NO.111 What is the optimal syntax for adding a link to a case in a Visualforce page? Choose 2
+answers
+A. < apex:outputLink value="{!URLFOR($Action.Case.Open, case)}" target="_blank"> [] {lcase.Name}
+<
+/apex:outputLink>
+B. < apex:outputLink value="/{!case.Id}" target="_blank"> [] {lcase.Name} < /apex:outputLink>
+C. < apex:outputLink value="{!URLFOR($Action.Case.View,case.Id)}" target="_blank"> (LIE
+{!case.Name} < /apex:outputLink>
+D. < apex:outputLink value="{!viewCase(case.Id)}" target="_blank"> [] {lcase.Name} <
+/apex:outputLink>
+Answer: B C
+
+NO.112 How can the DISTANCE and GEOLOCATION functions be used in SOQL queries? Choose 2
+answers
+A. To filter results based on distance from a latitude and longitude.\
+B. To get the distance results from a latitude and longitude.
+C. To order results by distance from a latitude or longitude.
+D. To group results in distance ranges from a latitude and longitude
+Answer: B C
+
+NO.113 When developing a Visualforce page that will be used by a global organization that does
+business in many languages and many currencies, which feature should be used? Choose 3 answers
+A. Custom Labels
+B. ConvertCurrency()
+C. Global Labels
+D. Translation Workbench
+E. GetLocalCurrency()
+Answer: A B D
+
+NO.114 A Visualforce page controller calls an external web service to get a list of records and display
+them on the page. The external web service has a complex backend and generally takes a long time
+to return results, causing timeouts. What can be done to avoid timeouts and display the results
+without any errors?
+A. Use the setTimeout () method on the HttpRequest to increase the timeout of the callout.
+B. Create a callback method and create an instance of a Continuation object in an action method.
+C. Implement the Batchable interface to perform the callout and capture the response in the batch
+job.
+D. Use the tag and keep polling to check the status of the response in the controller.
+Answer: B
+
+NO.115 A developer must create a custom pagination solution for accessing approximately 2000
+records and displaying 50 records on each page. Data from Salesforce will be accessed via an API and
+not via Apex. How can the developer meet these requirements? Choose 2 answers
+A. Use OFFSET in SOQL queries.
+B. Use LIMIT 50 in SOQL queries.
+C. Use a StandardSetController.
+D. Use CURSOR 50 in SOQL queries.
+Answer: A B
+
+NO.116 Which of the following annotations is the right way to invoke a single apex method
+A. @InvocableMethod()
+B. @InvocableAction()
+C. @InvocableApex()
+Answer: A
+
+NO.117 A developer is writing a complex application involving triggers, workflow rules, Apex classes,
+and processes.
+The developer needs to carefully consider the order of execution when developing the application. In
+what order do the following operations execute? 1. before Triggers 2. after Triggers 3. Post commit
+logic such as sending email 4. DML committed to the database 5. Workflow rules 6. Roll-up summary
+calculations
+A. 1, 2, 5, 6, 4, 3
+B. 1, 5, 6, 2, 4, 3
+C. 1, 2, 4, 5, 6, 3
+D. 1, 6, 5, 2, 4, 3
+Answer: A
+
+NO.118 Which statement is true about Apex web service methods? Choose 3 answers
+A. Web service methods can be exposed having a custom Apex class as parameter datatype.
+B. Web service methods can be overloaded with methods of the same name in the same class.
+C. Web service methods can only be added to Apex classes that are declared global.
+D. Web service methods can only be added to Apex triggers that are declared global.
+E. Web service methods cannot be deprecated in managed package code.
+Answer: A C E
+
+NO.119 A developer wrote a Visualforce page for Sales Reps to add products to an order. The page
+takes a URL query parameter, productFamily, which filters the product results. The test method for
+the filter behavior has an assertion failing due to an incorrect number of results. Why could the test
+be failing? Choose 2 answers
+A. The test does not call Test.startTest()
+B. The test does not create product data.
+C. The test is not run by a System Administrator.
+D. The test does not set the current page reference.
+Answer: B D
+
+NO.120 Employee-c is a Child object of Company-c. The Company-c object has an external Id field
+Company_Id_c.
+How can a developer insert an Employee-c record linked to Company-c with a Company_Id__c of
+'999'?
+A. Employee-c emp = new Employee-C(Name='Developer'); emp.Company_r = ' 999' insert emp;
+B. Employee-c emp = new Employee-C(Name='Developer'); emp.Company_c = ' 999' insert emp;
+C. Employee-c emp = new Employee-C(Name='Developer'); emp. Company-c = new Companyc(Company_Id_c=' 999 insert emp;
+D. Employee-c emp = new Employee-C(Name='Developer'); emp.Company_r = new Companyr(Company_Id_c=' 999'); insert emp;
+Answer: D
+
+NO.121 Which two objects can be inserted in the same transaction? Choose 2 answers
+A. Opportunity and User
+B. Account and AccountShare
+C. Case and CaseComment
+D. Account and Group
+Answer: B C
+
+NO.122 A company requires all internal users to submit a Case for adding a new Account in
+Salesforce. The case record captures all the data required to create an Account. The case approval
+process is a manual process.
+When a case is approved, an Account record should automatically be created based on the case
+details. What is the recommended solution?
+A. Configure a custom button on the Case page to update the Case Status and insert a new Account
+record.
+B. Develop an After Update trigger on Case to create an Account record based on Case Status.
+C. Develop a Before Update trigger on Case to create an Account record based on Case Status.
+D. Develop a Lightning Process to create an Account Record when the Case status becomes
+Approved.
+Answer: D
+
+NO.123 What is the correct order of execution for Visualforce Page "get" requests (initial page visit)
+A. 1: Evaluate constructors on controller and extensions
+2: If there's a element, create the view state
+3: Evaluate expressions, attribute actions, and other method calls (getters/setters) on main page
+4: Evaluate constructors, extensions, and expression on attribute definitions on any custom
+components present
+5: Send HTML to Browser
+B. 1: Evaluate constructors on controller and extensions
+2: Evaluate constructors, extensions, and expression on attribute definitions on any custom
+components present
+3: Evaluate expressions, attribute actions, and other method calls (getters/setters) on main page
+4: If there's a element, create the view state
+5: Send HTML to Browser
+C. 1: Evaluate constructors, extensions, and expression on attribute definitions on any custom
+components present
+2: Evaluate constructors on controller and extensions
+3: Evaluate expressions, attribute actions, and other method calls (getters/setters) on main page
+4: If there's a element, create the view state
+5: Send HTML to Browser
+Answer: B
+
+NO.124 What is a potential design issue with the following code? 
+
+	trigger accountTrigger on Account(before update) { 
+	    Boolean processOpportunity = false; 
+	    List<opportunity> opptysClosedLost = new List<opportunity>(); 
+	    List<opportunity> lstAllOpp = [select StageName 
+	        from Opportunity where accountId IN :Trigger.newMap.keySet()]; 
+	    if(!lstAllOpp.isEmpty()) 
+	        processOpportunity = true;
+	    while(processOpportunity) { 
+	        for(opportunity o : lstAllOpp) { 
+	            if(o.StageName == 'Closed - Lost')
+	                opptysClosedLost.add(o);
+	            processOpportunity = false; 
+	        } 
+	    } 
+	    if(!opptysClosedLost.isEmpty()）
+	        delete opptysClosedLost;
+	} 
+
+A. SOQL could be avoided by creating a formula field for StageName in Account from the related
+Opportunity.
+B. The code Will result in a System.LimitException : Too many script statements error.
+C. The code will result in a System.DmlException:Entity_is_Deleted error.
+D. The code will result in a System.LimitException: Apex CPU time limit exceeded error.
+Answer: D
+
+NO.125 Choose the correct definition for <apex:pageMessage>
+A. Standard Salesforce formatting, throws a specific message on a page
+B. Standard Salesforce formatting, shows all errors that occur on page. Can add more messages
+through the
+"ApexPages.addMessage" function
+C. A single message, without formatting, that can be associated with a specific component on the
+page
+D. No formatting; displays all errors on a page
+Answer: A
+
+NO.126 What is a recommended practice with regard to the Apex CPU limit? Choose 2 answers
+A. Optimize SOQL query performance.
+B. Use Map collections to cache sObjects.
+C. Avoid nested Apex iterations.
+D. Reduce view state in Visualforce pages.
+Answer: B C
+
+NO.127 The "action" attribute on <apex:page> is ONLY evaluated on which type of request?
+A. Get request
+B. Postback request
+Answer: A
+
+NO.128 In an Apex custom controller, how should a developer ensure that the current user has the
+relevant create and update' permissions for a particular object type?
+A. Call methods on the appropriate DescribeSObjectResult instance.
+B. Query the user's profile record and check what permissions the user has.
+C. Do nothing because the platform enforces CRUD permissions based on profiles.
+D. Add the with sharing keywords to the controller class definition.
+Answer: A
+
+NO.129 A developer has a page with two extensions overriding the Standard controller for Case.
+<apex:page standardController="Case" extension3="CaseExtensionOne,CaseExtension Two"
+showHeader="false"> Each extension has a method called Save. The page has a command button as
+defined: <apex:commandButton value="Save" action="{!save}"/> What will happen when a user
+clicks the command button?
+A. All of the three Save methods will be executed.
+B. Save from Case Standard Controller will be executed.
+C. Save from CaseExtensionTwo will be executed.
+D. Save from CaseExtensionOne will be executed.
+Answer: D
+
+NO.130 What is a valid request for the following REST method: @HttpPost global static void
+myPostMethod(String sl,Integer il, Boolean bl, String b2) Choose 2 answers
+A. < request> < sl>my first string < 11>123 < 32>my second string < b1>false < /request>
+B. < request> < sl>"my first string" < il>123 < sZ>"my second string" < bl>false < /request>
+C. Sl" : "my first string", 11" : "123", "b1" : "false", "S2" : "my second string"
+D. "il" : 123, "S1" : "my first string", "S2" : "my second string", "bl" : false
+Answer: B D
+
+NO.131 What is the recommended approach to create test data when testing Apex that involves
+Pricebooks, PricebookEntries, and Products?
+A. Insert a new standard Pricebook record within your Test Method so that it can be used with other
+test records.
+B. Use the Test.getStandardPricebookId() method to get theId of the standard Pricebook so that it
+can be used with other test records.
+C. Use the isTest (SeeAllData=true) annotation on Test Methods that require access to the standard
+Pricebook.
+D. Use the isTest (SeeAllData=true) annotation on the entire Test Class to allow your Test Methods
+access to the standard Pricebook.
+Answer: B
+
+NO.132 A developer has created a Team Member sObject that has a Master-Detail relationship to a
+Project sObject and a Lookup relationship to the User sObject. The developer must ensure that a User
+listed on a Team Member record has Read-Write access to the parent Project record. How can the
+developer accomplish this if the Project sObject has a Private sharing model and thousands of Project
+records?
+A. Create a Controller that uses the Without Sharing keyword.
+B. Create a Criteria-Based Sharing Rule on the Project sObject.
+C. Create a Team Member Trigger that inserts Project_Share records.
+D. Create a Project Sharing Rule that shares to the Team Member Group
+Answer: C
+
+NO.133 Which is a valid Apex REST Annotation? Choose 2 answers
+A. @HttpPatch
+B. @HttpDelete
+C. @HttpUpsert
+D. @HttpAction
+Answer: A B
+
+NO.134 To reduce the amount of time needed to write test coverage, a developer wants to use a
+spreadsheet uploaded as a Static Resource to supply test data in a test method. What code can the
+developer use to accomplish this?
+A. List< sObject> testAccounts = (List< Count>) [Select Id, Body from StaticResource Where Name =
+testAccounts
+B. < meta charset="utf-8" />List< sObject> testAccounts = Test . loadData (Account.sObjectType, '
+testAccounts');
+C. List< sObject> testAccounts = Test . loadData (Account .sObjectType, SResource. testAccounts)
+D. List< sObject> testAccounts = Test . loadData( [Select Id,Body from StaticResource Where Name
+=testAccounts
+Answer: B
+
+NO.135 External Id fields
+A. Configure a custom field as indexed.
+B. Configure a custom field as Salesforce ID.
+C. Configure a custom field as unique.
+D. Configure a custom field as external ID.
+Answer: C D
+
+NO.136 What is a controller value that will NOT be saved in the viewstate of a Visualforce page?
+Choose 3 answers
+A. A variable declared with the Transient keyword.
+B. A variable of a type that is a collection of SObjects.
+C. A system-generated object such as a Schema Describe object.
+D. A variable declared with the Static keyword.
+E. A variable of a type that is a custom Apex class.
+Answer: A C D
+
+NO.137 Which object should be used to access sharing programmatically on an object named
+Equipment__c?
+A. Equipment_Share_c
+B. Equipment-c
+C. Equipment_c_share
+D. Equipment__Share
+Answer: D
+
+NO.138 How could a developer create a Visualforce page for a Multilanguage organization? Choose
+2 answers
+A. Use by default to support translation workbench.
+B. Use custom labels to display validation rule errors in the current user's language.
+C. Use custom labels to display text in the current user's language.
+D. Use the language attribute of to support translation workbench.
+Answer: C D
+
+NO.139 Given the following code sample, what is a potential issue regarding bulk processing of
+records? 
+	
+trigger accountTestTrggr on Account (before insert, before update) 
+Account acct =Trigger.new[0]; 
+List <Contact> contacts = new List <Contact> (
+	[select id, salutation, firstname,lastname,email 
+	from Contact 
+	where accountId
+	= :acct.Id]); 
+for (Contact con: contacts) 
+	con.Title = 'Not Selected'; 
+update contacts;
+
+A. The code will not execute because the record in the list can be null and cause an exception.
+B. The code will process one record that is called explicitly per execution.
+C. The code will not execute because the list can be null and cause an exception.
+D. The code will have to be invoked multiple times to process all the records.
+Answer: B D
+
+NO.140 How many Territories can an instance of salesforce have?
+A. 100
+B. 200
+C. 400
+D. 500
+E. 1000
+Answer: D
+
+NO.141 What type of request and payload format can be received by a static method in a global
+Apex class that uses the webService keyword?
+A. REST/JSON
+B. SOAP/XML and SOAP/JSON
+C. SOAP/XML and REST/JSON
+D. SOAP/XML
+Answer: D
+
+NO.142 Choose the correct definition for <apex:actionFunction>
+A. Allows for controller methods to be called directly from Javascript. Must be encapsulated in tags.
+Unlike actionSupport, these functions can be called directly from Javascript code
+B. Sends an AJAX request according to the time interval you specify. If this ever gets re-rendered, it
+resets
+C. Adds AJAX support to another component (e.g. onClick, onMouseUp, onFocus, etc.)
+D. Can be associated with an AJAX request (actionFunction/actionSupport/actionPoller) and shows
+content conditionally depending on the status of the request (in progress/complete). Use the "id"
+field to specify name; use "status" field on related components to connect them
+E. Signifies which components should be processed by the server when an AJAX request is generated
+Answer: A
